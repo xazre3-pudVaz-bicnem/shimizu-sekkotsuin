@@ -8,7 +8,7 @@ export const sciaticaButtockPain: Article = {
   category: "sciatica",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "counseling-1",
+  image: "photo-hip-sofa-man-2",
   summary: [
     "坐骨神経はお尻の深部（梨状筋の下）を通るため、お尻の筋肉が硬くなると神経が刺激されやすい",
     "座り続ける、片側に体重をかける、脚を組むなどの癖が、お尻の筋肉の硬さを生む",

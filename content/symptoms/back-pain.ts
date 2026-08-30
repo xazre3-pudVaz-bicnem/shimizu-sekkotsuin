@@ -128,7 +128,7 @@ export const backPain: Symptom = {
   ],
   relatedSymptoms: ["shoulder-stiffness", "lower-back-pain", "neck-pain", "straight-neck", "chronic-lower-back-pain"],
   relatedArticles: ["posture-and-lower-back-pain", "desk-work-lower-back-pain", "how-spine-and-pelvis-work", "neck-shoulder-stiffness-smartphone"],
-  image: "check-lower-back",
+  image: "photo-shoulder-back-man",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

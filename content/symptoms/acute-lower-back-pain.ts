@@ -125,7 +125,7 @@ export const acuteLowerBackPain: Symptom = {
   ],
   relatedSymptoms: ["lower-back-pain", "chronic-lower-back-pain", "lumbar-disc-herniation", "sciatica", "leg-numbness"],
   relatedArticles: ["acute-lower-back-pain-first-aid", "lower-back-pain-donts", "morning-lower-back-pain", "how-spine-and-pelvis-work", "lower-back-pain-self-care"],
-  image: "explanation-spine-1",
+  image: "illust-f-acute-lower-back",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

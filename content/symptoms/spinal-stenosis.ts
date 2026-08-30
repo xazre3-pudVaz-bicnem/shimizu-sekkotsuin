@@ -129,7 +129,7 @@ export const spinalStenosis: Symptom = {
   ],
   relatedSymptoms: ["sciatica", "leg-numbness", "spondylolisthesis", "chronic-lower-back-pain", "lower-back-pain", "hip-pain"],
   relatedArticles: ["what-is-spinal-stenosis", "stenosis-walking-symptoms", "intermittent-claudication", "walking-lower-back-pain", "elderly-lower-back-concerns", "persistent-leg-numbness"],
-  image: "counseling-2",
+  image: "illust-m-stenosis",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

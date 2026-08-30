@@ -8,7 +8,7 @@ export const whatIsDiscHerniation: Article = {
   category: "herniation",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "explanation-spine-1",
+  image: "illust-f-herniation",
   summary: [
     "椎間板の中身（髄核）が飛び出して神経を刺激するのが椎間板ヘルニア。前かがみや座位で症状が強くなりやすい",
     "飛び出した椎間板は時間とともに縮小することが多く、多くの場合は手術以外の方法で経過をみる",

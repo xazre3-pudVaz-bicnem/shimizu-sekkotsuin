@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getSymptom, symptoms } from "@/content/symptoms";
 import { getVoice, VOICE_DISCLAIMER } from "@/content/voices";
 import { symptomCategories } from "@/content/types";
-import { images } from "@/content/images";
+import { images, symptomOgImage } from "@/content/images";
 import { clinic } from "@/content/clinic";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { CtaButtons } from "@/components/ui/CtaButtons";
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     path: `/symptoms/${s.slug}`,
     ogTitle: s.seo.ogTitle,
     ogDescription: s.seo.ogDescription,
-    ogImage: "/images/og-symptoms.jpg",
+    ogImage: symptomOgImage(s.slug),
     type: "article",
     publishedTime: s.publishedAt,
     modifiedTime: s.updatedAt,
@@ -130,8 +130,11 @@ export default async function SymptomPage({ params }: { params: Promise<Params> 
               </div>
               <CtaButtons className="mt-7" showNote={false} size="md" />
             </div>
-            <div className="relative aspect-[3/2] overflow-hidden rounded-3xl shadow-soft">
-              <Photo id={s.image} fill priority sizes="(min-width: 1024px) 45vw, 100vw" />
+            <div>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-white shadow-soft">
+                <Photo id={s.image} fill priority sizes="(min-width: 1024px) 45vw, 100vw" />
+              </div>
+              <p className="mt-2 text-right text-xs text-muted">※イラスト・写真はイメージです</p>
             </div>
           </div>
         </div>
@@ -260,9 +263,14 @@ export default async function SymptomPage({ params }: { params: Promise<Params> 
                 ))}
               </ul>
               <p className="mt-4 text-sm text-muted">{VOICE_DISCLAIMER}</p>
-              <Link href="/voice" className="mt-2 inline-flex min-h-11 items-center text-sm font-bold text-brand-700 underline-offset-4 hover:underline">
-                お客様の声をすべて見る
-              </Link>
+              <div className="flex flex-wrap gap-x-6">
+                <Link href="/voice" className="mt-2 inline-flex min-h-11 items-center text-sm font-bold text-brand-700 underline-offset-4 hover:underline">
+                  お客様の声をすべて見る
+                </Link>
+                <Link href={`/cases#${s.slug}`} className="mt-2 inline-flex min-h-11 items-center text-sm font-bold text-brand-700 underline-offset-4 hover:underline">
+                  {s.name}の施術事例を見る
+                </Link>
+              </div>
             </Section>
           )}
 

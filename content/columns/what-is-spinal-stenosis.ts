@@ -8,7 +8,7 @@ export const whatIsSpinalStenosis: Article = {
   category: "stenosis",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "explanation-spine-2",
+  image: "illust-m-stenosis",
   summary: [
     "脊柱管狭窄症は、神経の通り道が加齢変化などで狭くなり、歩くと脚に症状が出る状態",
     "腰を反らすと脊柱管が狭くなるため、立つ・歩く姿勢でつらく、前かがみや座位で楽になる",

@@ -8,7 +8,7 @@ export const neckShoulderStiffnessSmartphone: Article = {
   category: "neck-shoulder",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "treatment-neck",
+  image: "photo-neck-woman",
   summary: [
     "頭が前に出るほど首肩の筋肉の負担は増え、うつむく角度が大きいほど首への負荷は大きくなる",
     "肩こり・首の痛みの土台は背中の丸まりと骨盤の傾きにあり、首肩だけをもんでも戻りやすい",

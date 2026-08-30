@@ -8,7 +8,7 @@ export const herniationAndSciatica: Article = {
   category: "herniation",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "explanation-spine-2",
+  image: "illust-m-herniation",
   summary: [
     "ヘルニアは坐骨神経痛を起こす代表的な原因だが、坐骨神経痛の原因はヘルニアだけではない",
     "画像でヘルニアがあっても、実際の症状はお尻の筋肉など別の場所から来ていることもある",

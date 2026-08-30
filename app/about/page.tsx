@@ -4,6 +4,7 @@ import { clinic, director } from "@/content/clinic";
 import { symptoms } from "@/content/symptoms";
 import { ogImages } from "@/content/images";
 import { DoctorProfile } from "@/components/content/DoctorProfile";
+import { VideoSection } from "@/components/content/VideoSection";
 import { AccessSection } from "@/components/content/AccessSection";
 import { CtaSection } from "@/components/content/CtaSection";
 import { SymptomCard } from "@/components/content/SymptomCard";
@@ -118,6 +119,7 @@ export default function AboutPage() {
       </section>
 
       <DoctorProfile />
+      <VideoSection />
 
       <section className="section bg-mist">
         <div className="container-x">

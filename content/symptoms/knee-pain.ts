@@ -129,7 +129,7 @@ export const kneePain: Symptom = {
   ],
   relatedSymptoms: ["knee-osteoarthritis", "hip-pain", "lower-back-pain", "leg-numbness", "chronic-lower-back-pain"],
   relatedArticles: ["knee-pain-stairs", "walking-lower-back-pain", "how-spine-and-pelvis-work", "elderly-lower-back-concerns", "posture-and-lower-back-pain"],
-  image: "treatment-knee",
+  image: "illust-f-knee-pain",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

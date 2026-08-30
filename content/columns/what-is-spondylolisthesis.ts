@@ -8,7 +8,7 @@ export const whatIsSpondylolisthesis: Article = {
   category: "lower-back",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "explanation-spine-2",
+  image: "photo-lower-back-closeup",
   summary: [
     "腰椎すべり症は腰の骨が前方にずれた状態で、加齢による「変性すべり症」と分離症が原因の「分離すべり症」がある",
     "ずれによって脊柱管が狭くなると、脊柱管狭窄症と同じように歩行時の脚の症状が出ることがある",

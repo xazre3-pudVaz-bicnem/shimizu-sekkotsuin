@@ -136,7 +136,7 @@ export const lowerBackPain: Symptom = {
   ],
   relatedSymptoms: ["chronic-lower-back-pain", "acute-lower-back-pain", "sciatica", "lumbar-disc-herniation", "spinal-stenosis", "hip-pain"],
   relatedArticles: ["why-lower-back-pain-lasts", "morning-lower-back-pain", "sitting-lower-back-pain", "posture-and-lower-back-pain", "lower-back-pain-donts", "lower-back-pain-self-care"],
-  image: "check-lower-back",
+  image: "illust-f-lower-back",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

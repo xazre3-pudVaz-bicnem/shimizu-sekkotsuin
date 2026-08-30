@@ -2,14 +2,17 @@ import type { ImageKey } from "@/content/images";
 
 export type FaqItem = { q: string; a: string };
 
-export type SymptomCategoryId = "lower-back" | "hip-leg" | "knee" | "neck-shoulder" | "back";
+export type SymptomCategoryId = "lower-back" | "hip-leg" | "knee" | "neck-shoulder" | "back" | "head" | "injury" | "limbs";
 
-export const symptomCategories: { id: SymptomCategoryId; name: string; description: string }[] = [
-  { id: "lower-back", name: "腰の痛み", description: "腰痛・慢性腰痛・ぎっくり腰・椎間板ヘルニア・脊柱管狭窄症・腰椎すべり症" },
-  { id: "hip-leg", name: "お尻・脚の痛みやしびれ", description: "坐骨神経痛・足のしびれ・股関節痛" },
-  { id: "knee", name: "膝の痛み", description: "膝の痛み・変形性膝関節症" },
-  { id: "neck-shoulder", name: "首・肩の痛み", description: "肩こり・首の痛み・ストレートネック・四十肩・五十肩" },
-  { id: "back", name: "背中の痛み", description: "背中の張り・痛み" },
+export const symptomCategories: { id: SymptomCategoryId; name: string; description: string; image: ImageKey }[] = [
+  { id: "lower-back", name: "腰の痛み", description: "腰痛・慢性腰痛・ぎっくり腰・椎間板ヘルニア・脊柱管狭窄症・腰椎すべり症・産後の腰痛", image: "tile-b-03" },
+  { id: "hip-leg", name: "お尻・脚の痛みやしびれ", description: "坐骨神経痛・足のしびれ・股関節痛・変形性股関節症", image: "tile-a-07" },
+  { id: "knee", name: "膝の痛み", description: "膝の痛み・変形性膝関節症・半月板損傷", image: "tile-d-02" },
+  { id: "neck-shoulder", name: "首・肩の痛み", description: "肩こり・首の痛み・ストレートネック・四十肩・五十肩", image: "tile-d-06" },
+  { id: "head", name: "頭痛", description: "首や肩のこりに伴う緊張型頭痛", image: "tile-a-09" },
+  { id: "back", name: "背中の痛み", description: "背中の張り・痛み", image: "tile-e-10" },
+  { id: "injury", name: "ケガ・スポーツによる痛み", description: "捻挫・打撲・肉離れ、スポーツによる痛み", image: "tile-c-04" },
+  { id: "limbs", name: "肘・手首・足の痛み", description: "肘・手首の痛み、足首・足の痛み", image: "tile-e-08" },
 ];
 
 export type Symptom = {

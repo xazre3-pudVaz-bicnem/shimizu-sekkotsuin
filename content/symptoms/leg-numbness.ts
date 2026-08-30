@@ -129,7 +129,7 @@ export const legNumbness: Symptom = {
   ],
   relatedSymptoms: ["sciatica", "lumbar-disc-herniation", "spinal-stenosis", "hip-pain", "lower-back-pain"],
   relatedArticles: ["persistent-leg-numbness", "sciatica-leg-numbness", "what-is-sciatica", "intermittent-claudication", "sitting-lower-back-pain"],
-  image: "treatment-knee",
+  image: "illust-f-leg-numbness",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

@@ -128,7 +128,7 @@ export const neckPain: Symptom = {
   ],
   relatedSymptoms: ["shoulder-stiffness", "straight-neck", "frozen-shoulder", "back-pain"],
   relatedArticles: ["neck-shoulder-stiffness-smartphone", "sleeping-posture-lower-back-pain", "desk-work-lower-back-pain", "how-spine-and-pelvis-work"],
-  image: "treatment-neck",
+  image: "illust-m-neck-shoulder",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

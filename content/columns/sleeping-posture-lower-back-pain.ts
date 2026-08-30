@@ -8,7 +8,7 @@ export const sleepingPostureLowerBackPain: Article = {
   category: "self-care",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "posture-check-1",
+  image: "photo-lower-back-back-view",
   summary: [
     "仰向けは膝の下にクッション、横向きは膝の間にクッションを挟むと腰の負担が減りやすい",
     "うつぶせ寝は腰を反らせ首をひねるため、腰痛のある方には勧めにくい",

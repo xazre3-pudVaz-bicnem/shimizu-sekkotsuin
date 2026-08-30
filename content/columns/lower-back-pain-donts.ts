@@ -8,7 +8,7 @@ export const lowerBackPainDonts: Article = {
   category: "self-care",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "explanation-spine-1",
+  image: "photo-lower-back-closeup-2",
   summary: [
     "痛みが強い時期を過ぎたら、長期間の安静はかえって回復を遅らせると考えられている",
     "痛い場所を強くもむ、自己流の激しいストレッチ、腰を鳴らす動作は悪化の原因になりやすい",

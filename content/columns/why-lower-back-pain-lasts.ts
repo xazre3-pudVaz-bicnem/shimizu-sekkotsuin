@@ -8,7 +8,7 @@ export const whyLowerBackPainLasts: Article = {
   category: "lower-back",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "check-lower-back",
+  image: "photo-lower-back-standing",
   summary: [
     "腰痛が長引く背景には、腰そのものより「腰に負担が集まる身体の使い方」があることが多い",
     "股関節・背中の動き不足、痛みをかばう癖、筋肉の慢性的な硬さ、睡眠やストレスが重なって痛みが続く",

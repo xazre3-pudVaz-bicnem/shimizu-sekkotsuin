@@ -8,7 +8,7 @@ export const kneePainStairs: Article = {
   category: "knee",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "treatment-knee",
+  image: "photo-knee-senior-woman-2",
   summary: [
     "階段の下りは、太ももの筋肉がブレーキをかけながら体重を受け止めるため膝への負担が大きい",
     "膝の痛みの背景には、太ももの筋力低下、股関節の硬さ、足元の荷重の偏りが重なっていることが多い",

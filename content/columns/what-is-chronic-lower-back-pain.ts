@@ -8,7 +8,7 @@ export const whatIsChronicLowerBackPain: Article = {
   category: "lower-back",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "explanation-spine-2",
+  image: "photo-lower-back-back-view",
   summary: [
     "慢性腰痛は一般に3か月以上続く腰痛を指し、急性腰痛とは対応の考え方が異なる",
     "画像検査の変化と痛みの強さは必ずしも一致せず、身体の使い方・筋肉の状態・生活要因が重なって続く",

@@ -128,7 +128,7 @@ export const hipPain: Symptom = {
   ],
   relatedSymptoms: ["lower-back-pain", "knee-pain", "sciatica", "knee-osteoarthritis", "chronic-lower-back-pain"],
   relatedArticles: ["walking-lower-back-pain", "knee-pain-stairs", "how-spine-and-pelvis-work", "elderly-lower-back-concerns", "posture-and-lower-back-pain"],
-  image: "check-lower-back",
+  image: "illust-m-hip-pain",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

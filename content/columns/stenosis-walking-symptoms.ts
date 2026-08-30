@@ -8,7 +8,7 @@ export const stenosisWalkingSymptoms: Article = {
   category: "stenosis",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "counseling-2",
+  image: "illust-f-stenosis",
   summary: [
     "歩行時に腰が反ることで脊柱管が狭くなり、脚の痛み・しびれが出て歩けなくなる",
     "歩かないと筋力が落ちてさらに歩けなくなるため、休みながらでも歩く総量を保つことが大切",

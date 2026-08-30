@@ -27,6 +27,7 @@ export function Photo({ id, sizes = "100vw", priority = false, className, fill =
         fill
         sizes={sizes}
         priority={priority}
+        fetchPriority={priority ? "high" : undefined}
         quality={quality}
         className={cx("object-cover", className)}
       />
@@ -40,6 +41,7 @@ export function Photo({ id, sizes = "100vw", priority = false, className, fill =
       height={img.height}
       sizes={sizes}
       priority={priority}
+      fetchPriority={priority ? "high" : undefined}
       quality={quality}
       className={cx("h-auto w-full", className)}
     />

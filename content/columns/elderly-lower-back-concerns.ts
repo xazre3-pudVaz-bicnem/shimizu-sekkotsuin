@@ -8,7 +8,7 @@ export const elderlyLowerBackConcerns: Article = {
   category: "lower-back",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "counseling-1",
+  image: "voice-mh",
   summary: [
     "高齢の方の腰痛には脊柱管狭窄症・圧迫骨折・変性すべり症・筋力低下など特有の背景がある",
     "急な腰痛は圧迫骨折の可能性があり、骨粗しょう症のある方は特に医療機関での確認が必要",

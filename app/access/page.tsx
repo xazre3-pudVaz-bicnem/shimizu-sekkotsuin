@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { clinic } from "@/content/clinic";
 import { ogImages } from "@/content/images";
 import { AccessSection } from "@/components/content/AccessSection";
@@ -6,7 +7,7 @@ import { CtaSection } from "@/components/content/CtaSection";
 import { PageHero } from "@/components/ui/PageHero";
 import { Photo } from "@/components/ui/Photo";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { CarIcon, MapPinIcon, TrainIcon } from "@/components/ui/Icons";
+import { ArrowIcon, CarIcon, MapPinIcon, TrainIcon } from "@/components/ui/Icons";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -62,6 +63,14 @@ export default function AccessPage() {
                 {clinic.access.parkingNote}
               </p>
             </div>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/access/koya-station" className="btn btn-outline">
+              高野駅からの道順を見る <ArrowIcon size={18} />
+            </Link>
+            <Link href="/access/ogiohashi-station" className="btn btn-outline">
+              扇大橋駅からの道順を見る <ArrowIcon size={18} />
+            </Link>
           </div>
           <div className="mt-8 rounded-2xl border border-line bg-mist p-6">
             <p className="flex items-center gap-2 font-bold text-ink">

@@ -8,7 +8,7 @@ export const whatIsSciatica: Article = {
   category: "sciatica",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "explanation-spine-2",
+  image: "photo-hip-sofa-man",
   summary: [
     "坐骨神経痛は、腰から足先まで伸びる坐骨神経の通り道のどこかで神経が刺激されて起こる「症状」",
     "原因は腰（ヘルニア・脊柱管狭窄症など）にあることも、お尻の筋肉にあることもある",

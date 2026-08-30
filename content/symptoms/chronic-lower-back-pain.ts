@@ -128,7 +128,7 @@ export const chronicLowerBackPain: Symptom = {
   ],
   relatedSymptoms: ["lower-back-pain", "sciatica", "lumbar-disc-herniation", "spinal-stenosis", "spondylolisthesis", "hip-pain"],
   relatedArticles: ["what-is-chronic-lower-back-pain", "why-lower-back-pain-lasts", "elderly-lower-back-concerns", "posture-and-lower-back-pain", "lower-back-pain-self-care", "how-spine-and-pelvis-work"],
-  image: "explanation-spine-2",
+  image: "illust-m-chronic-lower-back",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

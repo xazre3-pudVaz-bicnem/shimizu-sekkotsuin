@@ -115,6 +115,12 @@ export default function VoicePage() {
             ))}
           </ul>
           <div className="mt-8 flex flex-wrap gap-3">
+            <Link href="/cases" className="btn btn-primary">
+              症状別の施術事例を見る
+            </Link>
+            <Link href="/review" className="btn btn-outline">
+              口コミのお願い・書き方
+            </Link>
             <a href={clinic.links.googleMaps} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
               Googleマップのクチコミを見る <ExternalIcon size={16} />
             </a>

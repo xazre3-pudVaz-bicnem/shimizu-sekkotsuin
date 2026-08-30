@@ -1,11 +1,14 @@
 /**
  * public/images に配置した写真のレジストリ。
- * すべて院から提供された実写真（scripts/optimize-images.mjs でリネーム・最適化済み）。
+ * realPhotos: 院から提供された実写真（scripts/optimize-images.mjs でリネーム・最適化済み）
+ * aiImages : AI生成のイメージ画像（scripts/prepare-ai-images.mjs で配置。content/images-ai.ts）
  * alt は画像の内容を正確に説明する（検索キーワードの詰め込みはしない）。
  */
+import { aiImages } from "@/content/images-ai";
+
 export type ImageAsset = { src: string; width: number; height: number; alt: string };
 
-export const images = {
+export const realPhotos = {
   "clinic-exterior": { src: "/images/clinic-exterior.jpg", width: 1247, height: 1313, alt: "清水接骨院の外観。緑の看板と、腰痛・膝痛など対応症状のイラストが描かれた窓が目印" },
   "clinic-exterior-evening": { src: "/images/clinic-exterior-evening.jpg", width: 1108, height: 1477, alt: "夕方の清水接骨院の外観。入口の明かりと、のぼり旗が立っている" },
   "director-portrait": { src: "/images/director-portrait.jpg", width: 1163, height: 1407, alt: "清水接骨院 院長・清水正尊（柔道整復師）のポートレート" },
@@ -44,6 +47,8 @@ export const images = {
   "patients-collage": { src: "/images/patients-collage.jpg", width: 1280, height: 1280, alt: "清水接骨院に来院された患者さんと院長の記念写真" },
 } as const satisfies Record<string, ImageAsset>;
 
+export const images = { ...realPhotos, ...aiImages } as const;
+
 export type ImageKey = keyof typeof images;
 
 export const ogImages = {
@@ -52,3 +57,14 @@ export const ogImages = {
   clinic: "/images/og-clinic.jpg",
   symptoms: "/images/og-symptoms.jpg",
 } as const;
+
+/** 症状ページ用のOG画像（scripts/prepare-ai-images.mjs が生成）。存在しないslugは既定画像にフォールバック */
+export function symptomOgImage(slug: string): string {
+  return SYMPTOM_OG_SLUGS.has(slug) ? `/images/og-symptom-${slug}.jpg` : ogImages.symptoms;
+}
+
+const SYMPTOM_OG_SLUGS = new Set([
+  "lower-back-pain", "chronic-lower-back-pain", "acute-lower-back-pain", "sciatica", "lumbar-disc-herniation", "spinal-stenosis", "spondylolisthesis",
+  "leg-numbness", "hip-pain", "knee-pain", "knee-osteoarthritis", "shoulder-stiffness", "neck-pain", "straight-neck", "frozen-shoulder", "back-pain",
+  "meniscus-injury", "hip-osteoarthritis", "sports-injury", "sprain-bruise-strain", "postpartum-back-pain", "tension-headache", "elbow-wrist-pain", "ankle-foot-pain",
+]);

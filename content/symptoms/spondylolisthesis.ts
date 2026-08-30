@@ -128,7 +128,7 @@ export const spondylolisthesis: Symptom = {
   ],
   relatedSymptoms: ["spinal-stenosis", "chronic-lower-back-pain", "sciatica", "leg-numbness", "lower-back-pain"],
   relatedArticles: ["what-is-spondylolisthesis", "what-is-spinal-stenosis", "walking-lower-back-pain", "elderly-lower-back-concerns", "how-spine-and-pelvis-work"],
-  image: "explanation-spine-2",
+  image: "illust-m-herniation",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

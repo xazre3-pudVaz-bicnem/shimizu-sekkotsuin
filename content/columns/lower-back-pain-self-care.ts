@@ -8,7 +8,7 @@ export const lowerBackPainSelfCare: Article = {
   category: "self-care",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "explanation-spine-1",
+  image: "photo-lower-back-closeup",
   summary: [
     "セルフケアは「時期」と「状態」に合わせて選ぶ。急性期は無理をせず、慢性期は動かすことが中心",
     "腰そのものより、お尻・太もも・股関節・背中をゆるめることが腰の負担軽減につながる",

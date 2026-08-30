@@ -8,6 +8,7 @@ import { CtaSection } from "@/components/content/CtaSection";
 import { Faq } from "@/components/content/Faq";
 import { SymptomCard } from "@/components/content/SymptomCard";
 import { Flow } from "@/components/sections/Flow";
+import { VideoSection } from "@/components/content/VideoSection";
 import { PageHero } from "@/components/ui/PageHero";
 import { Photo } from "@/components/ui/Photo";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -94,6 +95,7 @@ export default function TreatmentPage() {
       </section>
 
       <Flow withHeading />
+      <VideoSection />
 
       <section className="section bg-mist">
         <div className="container-x grid items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-16">

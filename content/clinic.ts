@@ -45,6 +45,8 @@ export const clinic = {
   },
   links: {
     googleMaps: "https://g.page/shimizu-sekkotsuin?share",
+    /** Googleクチコミ投稿リンク（g.page の短縮名からの標準形式。実際に投稿画面が開くか要確認） */
+    googleReview: "https://g.page/shimizu-sekkotsuin/review?rc",
     ekiten: "https://www.ekiten.jp/shop_45920/",
   },
   /** 埋め込み地図（APIキー不要の検索埋め込み） */

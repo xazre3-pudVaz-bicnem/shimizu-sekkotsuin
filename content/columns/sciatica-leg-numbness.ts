@@ -8,7 +8,7 @@ export const sciaticaLegNumbness: Article = {
   category: "numbness",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "treatment-knee",
+  image: "photo-calf-woman",
   summary: [
     "しびれる場所は、神経のどの部分が刺激されているかを推測する手がかりになる",
     "しびれの場所を強くもむと神経をさらに刺激することがあり、原因の場所に働きかけることが大切",

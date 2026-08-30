@@ -6,15 +6,23 @@ import { sciatica } from "./sciatica";
 import { lumbarDiscHerniation } from "./lumbar-disc-herniation";
 import { spinalStenosis } from "./spinal-stenosis";
 import { spondylolisthesis } from "./spondylolisthesis";
+import { postpartumBackPain } from "./postpartum-back-pain";
 import { legNumbness } from "./leg-numbness";
 import { hipPain } from "./hip-pain";
+import { hipOsteoarthritis } from "./hip-osteoarthritis";
 import { kneePain } from "./knee-pain";
 import { kneeOsteoarthritis } from "./knee-osteoarthritis";
+import { meniscusInjury } from "./meniscus-injury";
 import { shoulderStiffness } from "./shoulder-stiffness";
 import { neckPain } from "./neck-pain";
 import { straightNeck } from "./straight-neck";
 import { frozenShoulder } from "./frozen-shoulder";
+import { tensionHeadache } from "./tension-headache";
 import { backPain } from "./back-pain";
+import { sprainBruiseStrain } from "./sprain-bruise-strain";
+import { sportsInjury } from "./sports-injury";
+import { elbowWristPain } from "./elbow-wrist-pain";
+import { ankleFootPain } from "./ankle-foot-pain";
 
 /** 表示順 = 一覧の並び順 */
 export const symptoms: Symptom[] = [
@@ -25,15 +33,23 @@ export const symptoms: Symptom[] = [
   lumbarDiscHerniation,
   spinalStenosis,
   spondylolisthesis,
+  postpartumBackPain,
   legNumbness,
   hipPain,
+  hipOsteoarthritis,
   kneePain,
   kneeOsteoarthritis,
+  meniscusInjury,
   shoulderStiffness,
   neckPain,
   straightNeck,
   frozenShoulder,
+  tensionHeadache,
   backPain,
+  sprainBruiseStrain,
+  sportsInjury,
+  elbowWristPain,
+  ankleFootPain,
 ];
 
 export function getSymptom(slug: string): Symptom | undefined {

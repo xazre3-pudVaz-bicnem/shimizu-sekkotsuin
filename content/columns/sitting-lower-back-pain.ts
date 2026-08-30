@@ -8,7 +8,7 @@ export const sittingLowerBackPain: Article = {
   category: "lower-back",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "counseling-2",
+  image: "photo-lower-back-sitting-back-view",
   summary: [
     "座位は立位より腰の椎間板への負担が大きく、骨盤が後ろに倒れる座り方でさらに増える",
     "座るとお尻や脚がしびれる場合は、お尻の筋肉の圧迫や椎間板の問題が関わることがある",

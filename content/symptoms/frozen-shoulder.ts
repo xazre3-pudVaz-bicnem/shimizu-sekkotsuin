@@ -128,7 +128,7 @@ export const frozenShoulder: Symptom = {
   ],
   relatedSymptoms: ["shoulder-stiffness", "neck-pain", "straight-neck", "back-pain"],
   relatedArticles: ["neck-shoulder-stiffness-smartphone", "how-spine-and-pelvis-work", "posture-and-lower-back-pain", "sleeping-posture-lower-back-pain"],
-  image: "check-shoulder",
+  image: "photo-shoulder-senior-woman",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

@@ -8,7 +8,7 @@ export const persistentLegNumbness: Article = {
   category: "numbness",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "treatment-knee",
+  image: "photo-calf-woman-2",
   summary: [
     "続く足のしびれの原因は、腰・お尻の神経の通り道、血流、内科的な病気など多岐にわたる",
     "片側か両側か、どの範囲か、姿勢で変わるか、冷えを伴うかが見分けの手がかりになる",

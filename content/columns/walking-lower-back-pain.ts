@@ -8,7 +8,7 @@ export const walkingLowerBackPain: Article = {
   category: "lower-back",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "explanation-spine-2",
+  image: "photo-hip-standing-man",
   summary: [
     "歩くと痛み、前かがみで休むと楽になる症状は、脊柱管狭窄症で多くみられる「間欠性跛行」の可能性がある",
     "股関節の硬さや足元の荷重の偏りで、歩行のたびに腰が反って痛むケースも多い",

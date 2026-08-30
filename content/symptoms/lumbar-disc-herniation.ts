@@ -128,7 +128,7 @@ export const lumbarDiscHerniation: Symptom = {
   ],
   relatedSymptoms: ["sciatica", "leg-numbness", "lower-back-pain", "acute-lower-back-pain", "spinal-stenosis", "chronic-lower-back-pain"],
   relatedArticles: ["what-is-disc-herniation", "herniation-and-sciatica", "sitting-lower-back-pain", "sciatica-leg-numbness", "lower-back-pain-donts", "how-spine-and-pelvis-work"],
-  image: "explanation-spine-1",
+  image: "illust-f-herniation",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

@@ -8,7 +8,7 @@ export const morningLowerBackPain: Article = {
   category: "lower-back",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "posture-check-1",
+  image: "photo-lower-back-sitting",
   summary: [
     "朝の腰痛は、寝ている間の筋肉の硬さ、寝具の沈み込み、寝姿勢、起き上がり方が関わっていることが多い",
     "起床直後は椎間板に水分が多く、前かがみで負担がかかりやすい時間帯",

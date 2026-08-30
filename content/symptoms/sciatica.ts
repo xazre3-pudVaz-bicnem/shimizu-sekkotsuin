@@ -133,7 +133,7 @@ export const sciatica: Symptom = {
   ],
   relatedSymptoms: ["lumbar-disc-herniation", "spinal-stenosis", "leg-numbness", "lower-back-pain", "hip-pain", "spondylolisthesis"],
   relatedArticles: ["what-is-sciatica", "sciatica-vs-lower-back-pain", "sciatica-buttock-pain", "sciatica-leg-numbness", "herniation-and-sciatica", "sitting-lower-back-pain"],
-  image: "explanation-spine-2",
+  image: "illust-m-sciatica",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
 };

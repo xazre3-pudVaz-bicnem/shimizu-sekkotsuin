@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { clinic } from "@/content/clinic";
 import { symptoms } from "@/content/symptoms";
-import { mainNav, subNav } from "@/lib/nav";
+import { mainNav, policyNav, subNav } from "@/lib/nav";
 import { LineIcon, PhoneIcon } from "@/components/ui/Icons";
 import { MobileNav } from "@/components/layout/MobileNav";
 
@@ -54,7 +54,7 @@ export function Header() {
 
         <MobileNav
           main={mainNav}
-          sub={subNav}
+          sub={[...subNav, ...policyNav]}
           symptoms={symptomLinks}
           tel={clinic.tel}
           telHref={clinic.telHref}

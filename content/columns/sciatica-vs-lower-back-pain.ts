@@ -8,7 +8,7 @@ export const sciaticaVsLowerBackPain: Article = {
   category: "sciatica",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "explanation-spine-1",
+  image: "photo-lower-back-standing-4",
   summary: [
     "腰痛は腰そのものの痛み、坐骨神経痛はお尻から脚にかけて神経の通り道に出る痛み・しびれ",
     "腰痛のあとにお尻や脚の症状が出てきた場合は、神経への負担が加わってきたサインのことがある",

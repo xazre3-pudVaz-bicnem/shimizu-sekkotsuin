@@ -8,7 +8,7 @@ export const drivingLowerBackPain: Article = {
   category: "lower-back",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "check-lower-back",
+  image: "photo-lower-back-sitting",
   summary: [
     "運転中の腰痛は、振動・同じ姿勢・右脚だけを使うペダル操作・シートの沈み込みが重なって起こる",
     "シートを深く座れる位置に調整し、腰にクッションを入れ、背もたれを倒しすぎないことが基本",

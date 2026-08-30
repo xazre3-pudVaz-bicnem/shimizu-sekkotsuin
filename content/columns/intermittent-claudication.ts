@@ -8,7 +8,7 @@ export const intermittentClaudication: Article = {
   category: "stenosis",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "explanation-spine-1",
+  image: "photo-hip-standing-man-2",
   summary: [
     "間欠性跛行には、神経が原因のもの（脊柱管狭窄症）と血管が原因のもの（閉塞性動脈硬化症）がある",
     "前かがみで楽になるなら神経性、立ち止まるだけで楽になり脚の冷えを伴うなら血管性の可能性",

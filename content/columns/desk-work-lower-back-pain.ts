@@ -8,7 +8,7 @@ export const deskWorkLowerBackPain: Article = {
   category: "posture",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "posture-check-2",
+  image: "photo-shoulder-desk-man",
   summary: [
     "デスクワークの腰痛は、骨盤が後ろに倒れる座り方と、長時間動かないことの2つが主な原因",
     "椅子の高さ・画面の高さ・キーボードの位置を整えるだけで、腰と首の負担は大きく変わる",

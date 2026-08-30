@@ -8,7 +8,7 @@ export const acuteLowerBackPainFirstAid: Article = {
   category: "acute",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "check-lower-back",
+  image: "photo-lower-back-standing-3",
   summary: [
     "直後は楽な姿勢で無理をせず、脚の麻痺や排尿の異常など受診が必要なサインを確認する",
     "最初の1〜2日は無理をしないが、何日も寝たきりにならず痛みの範囲で少しずつ動く",

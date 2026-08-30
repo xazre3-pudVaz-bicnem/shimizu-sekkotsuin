@@ -2,15 +2,16 @@ import Link from "next/link";
 import { clinic, director } from "@/content/clinic";
 import { symptoms } from "@/content/symptoms";
 import { articleCategories } from "@/content/types";
-import { mainNav, subNav } from "@/lib/nav";
+import { mainNav, policyNav, subNav } from "@/lib/nav";
 import { LineIcon, PhoneIcon } from "@/components/ui/Icons";
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const linkCls = "inline-flex min-h-11 items-center text-[15px] text-ink-soft hover:text-brand-700 hover:underline";
   return (
     <footer className="border-t border-line bg-cream pb-24 md:pb-0">
       <div className="container-x py-14">
-        <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr_1.2fr_1fr]">
           <div>
             <p className="text-xl font-bold text-ink">{clinic.name}</p>
             <p className="mt-1 text-sm text-muted">{clinic.tagline}</p>
@@ -42,17 +43,10 @@ export function Footer() {
 
           <nav aria-label="フッターナビゲーション">
             <p className="text-sm font-bold text-muted">メニュー</p>
-            <ul className="mt-3 space-y-1">
-              {mainNav.map((item) => (
+            <ul className="mt-3 space-y-0.5">
+              {[...mainNav, ...subNav].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="inline-flex min-h-11 items-center text-[15px] text-ink-soft hover:text-brand-700 hover:underline">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-              {subNav.slice(0, 3).map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href} className="inline-flex min-h-11 items-center text-[15px] text-ink-soft hover:text-brand-700 hover:underline">
+                  <Link href={item.href} className={linkCls}>
                     {item.label}
                   </Link>
                 </li>
@@ -62,10 +56,10 @@ export function Footer() {
 
           <nav aria-label="症状別ページ">
             <p className="text-sm font-bold text-muted">症状から探す</p>
-            <ul className="mt-3 space-y-1">
+            <ul className="mt-3 grid grid-cols-2 gap-x-3">
               {symptoms.map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/symptoms/${s.slug}`} className="inline-flex min-h-11 items-center text-[15px] text-ink-soft hover:text-brand-700 hover:underline">
+                  <Link href={`/symptoms/${s.slug}`} className={linkCls}>
                     {s.name}
                   </Link>
                 </li>
@@ -75,10 +69,10 @@ export function Footer() {
 
           <nav aria-label="コラムカテゴリ">
             <p className="text-sm font-bold text-muted">コラムカテゴリ</p>
-            <ul className="mt-3 space-y-1">
+            <ul className="mt-3 space-y-0.5">
               {articleCategories.map((c) => (
                 <li key={c.id}>
-                  <Link href={`/column/category/${c.id}`} className="inline-flex min-h-11 items-center text-[15px] text-ink-soft hover:text-brand-700 hover:underline">
+                  <Link href={`/column/category/${c.id}`} className={linkCls}>
                     {c.name}
                   </Link>
                 </li>
@@ -89,10 +83,10 @@ export function Footer() {
 
         <div className="mt-12 border-t border-line pt-6 text-sm text-muted">
           <p>
-            サイト内の症状・コラム記事は、{clinic.name} {director.role} {director.name}（{director.license}）が監修しています。掲載内容は一般的な情報提供を目的としたものであり、医学的な診断に代わるものではありません。
+            サイト内の症状・コラム記事は、{clinic.name} {director.role} {director.name}（{director.license}）が監修しています。掲載内容は一般的な情報提供を目的としたものであり、医学的な診断に代わるものではありません。症状の写真・イラストはイメージです。
           </p>
           <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-1">
-            {subNav.slice(3).map((item) => (
+            {policyNav.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="inline-flex min-h-11 items-center hover:text-brand-700 hover:underline">
                   {item.label}

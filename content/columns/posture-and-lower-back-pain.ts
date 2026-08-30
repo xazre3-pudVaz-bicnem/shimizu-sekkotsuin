@@ -8,7 +8,7 @@ export const postureAndLowerBackPain: Article = {
   category: "posture",
   publishedAt: "2026-08-30",
   updatedAt: "2026-08-30",
-  image: "posture-check-2",
+  image: "photo-lower-back-standing-2",
   summary: [
     "反り腰は腰の関節や靭帯に、猫背は椎間板や腰の筋肉に負担をかけやすい",
     "姿勢の崩れは骨盤の傾きと、股関節・背中の動きの不足から生まれることが多い",
