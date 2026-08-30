@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  /* 日本語は OS 標準フォント（Web フォント不使用：表示速度と高齢の利用者の読みやすさを優先） */
+  --font-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans CJK JP", Meiryo, "Yu Gothic Medium", "Yu Gothic", system-ui, sans-serif;
+  --font-latin: var(--font-manrope), "Helvetica Neue", Arial, "Hiragino Sans", Meiryo, sans-serif;
+
+  /* ブランドカラー：院の看板の緑を、落ち着いた深緑に再解釈 */
+  --color-brand-50: #f1f7f4;
+  --color-brand-100: #dfeee6;
+  --color-brand-200: #bfdccc;
+  --color-brand-300: #93c3ab;
+  --color-brand-400: #61a487;
+  --color-brand-500: #3d8a6b;
+  --color-brand-600: #2b7157;
+  --color-brand-700: #245c48;
+  --color-brand-800: #1e4a3b;
+  --color-brand-900: #183b30;
+  --color-brand-950: #0c221b;
+
+  /* 施術着の水色をアクセントに */
+  --color-mizu-100: #e8f1f8;
+  --color-mizu-200: #cfe2ef;
+  --color-mizu-300: #a9cbe3;
+  --color-mizu-500: #5f95c2;
+  --color-mizu-700: #35648c;
+
+  --color-ink: #1d2726;
+  --color-ink-soft: #3e4a49;
+  --color-muted: #5f6b69;
+  --color-line: #e2e8e5;
+  --color-paper: #ffffff;
+  --color-cream: #f7f6f1;
+  --color-mist: #f3f7f5;
+
+  --color-warn: #b3423b;
+  --color-warn-bg: #fcf1f0;
+  --color-warn-line: #f0cfcc;
+
+  --color-linebrand: #06c755;
+  --color-linebrand-dark: #059f45;
+
+  --shadow-soft: 0 1px 2px rgba(20, 40, 35, 0.04), 0 10px 30px -14px rgba(20, 40, 35, 0.22);
+  --shadow-card: 0 1px 2px rgba(20, 40, 35, 0.04), 0 4px 16px -8px rgba(20, 40, 35, 0.14);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "palt";
+    line-height: 1.9;
+    letter-spacing: 0.01em;
+    overflow-wrap: anywhere;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: 0.02em;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  :focus-visible {
+    outline: 3px solid var(--color-brand-500);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  ::selection { background: var(--color-brand-200); }
+  summary { list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+}
+
+@layer components {
+  .container-x { margin-inline: auto; width: 100%; max-width: 72rem; padding-inline: 1.25rem; }
+  @media (min-width: 640px) { .container-x { padding-inline: 2rem; } }
+
+  .section { padding-block: 4rem; }
+  @media (min-width: 640px) { .section { padding-block: 6rem; } }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+    min-height: 3.25rem; padding-inline: 1.6rem; border-radius: 9999px;
+    font-weight: 700; font-size: 1rem; line-height: 1.3; text-align: center;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--color-brand-600); color: #fff; }
+  .btn-primary:hover { background: var(--color-brand-700); }
+  .btn-outline { border: 2px solid var(--color-brand-600); color: var(--color-brand-700); background: #fff; }
+  .btn-outline:hover { background: var(--color-brand-50); }
+  /* LINE ブランド色の上では白文字のコントラストが不足するため、濃い緑の文字にする */
+  .btn-line { background: var(--color-linebrand); color: #0b2a1a; }
+  .btn-line:hover { background: #1fd268; }
+  .btn-ghost { color: var(--color-brand-700); }
+  .btn-ghost:hover { background: var(--color-brand-50); }
+
+  .label-en {
+    font-family: var(--font-latin); font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-brand-600);
+  }
+  .card {
+    background: #fff; border: 1px solid var(--color-line); border-radius: 1.25rem;
+    box-shadow: var(--shadow-card);
+  }
+  .tel-link { font-family: var(--font-latin); font-weight: 800; letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+
+  /* 表示アニメーションは意図的に使わない（高齢の利用者・検索エンジンのレンダリングで内容が隠れないようにする） */
+  .reveal { opacity: 1; }
+}
