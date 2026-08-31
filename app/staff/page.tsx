@@ -40,7 +40,7 @@ export default function StaffPage() {
           <Breadcrumb items={[{ name: "院長紹介" }]} />
           <div className="mt-6 grid items-center gap-8 lg:grid-cols-[1fr_0.8fr] lg:gap-14">
             <div>
-              <p className="label-en">Director</p>
+              <p className="text-sm font-bold text-brand-700">院長のご紹介</p>
               <h1 className="mt-3 text-[1.75rem] leading-snug sm:text-4xl">
                 院長紹介
                 <span className="mt-2 block text-xl text-ink-soft sm:text-2xl">
@@ -70,7 +70,7 @@ export default function StaffPage() {
       <section className="section">
         <div className="container-x grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
-            <SectionHeading en="Greeting" title="ごあいさつ" />
+            <SectionHeading title="ごあいさつ" />
             <div className="mt-6 space-y-4 text-base leading-[1.95] text-ink-soft sm:text-lg">
               {director.greeting.map((p, i) => (
                 <p key={i}>{p}</p>
@@ -93,7 +93,7 @@ export default function StaffPage() {
 
       <section className="section bg-cream">
         <div className="container-x">
-          <SectionHeading en="Profile" title="プロフィール・経歴" lead="既存の公式サイト等で確認できる事実のみを掲載しています。" />
+          <SectionHeading title="プロフィール・経歴" lead="既存の公式サイト等で確認できる事実のみを掲載しています。" />
           <dl className="mt-8 max-w-3xl">
             {[
               ["氏名", director.name],
@@ -115,7 +115,7 @@ export default function StaffPage() {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading en="Approach" title="施術で大切にしている考え方" />
+          <SectionHeading title="施術で大切にしている考え方" />
           <ul className="mt-10 grid gap-4 md:grid-cols-2">
             {director.methods.map((m) => (
               <li key={m} className="card p-6">
@@ -132,7 +132,7 @@ export default function StaffPage() {
 
       <section className="section bg-mist">
         <div className="container-x">
-          <SectionHeading en="Symptoms" title="院長が特に多く担当してきた症状" lead="各症状の考え方と施術方針は、症状ページで詳しく解説しています。" />
+          <SectionHeading title="院長が特に多く担当してきた症状" lead="各症状の考え方と施術方針は、症状ページで詳しく解説しています。" />
           <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {focus.map((s) => (
               <li key={s.slug}>

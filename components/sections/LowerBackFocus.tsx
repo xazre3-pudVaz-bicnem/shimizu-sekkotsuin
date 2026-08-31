@@ -12,7 +12,6 @@ export function LowerBackFocus() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
             <SectionHeading
-              en="Lower Back"
               title="腰痛・坐骨神経痛など、腰まわりの症状に力を入れています"
               light
               lead="慢性的な腰痛、お尻から脚への痛みやしびれ、椎間板ヘルニアや脊柱管狭窄症と言われた方、急なぎっくり腰。清水接骨院では、腰まわりの症状を中心に施術を行ってきました。"

@@ -27,7 +27,6 @@ export default function SupervisionPage() {
   return (
     <>
       <PageHero
-        en="Editorial Policy"
         title="記事監修について"
         lead={<p>このサイトは身体や健康に関わる情報を扱うため、次の方針で作成・監修しています。</p>}
         breadcrumb={[{ name: "記事監修について" }]}

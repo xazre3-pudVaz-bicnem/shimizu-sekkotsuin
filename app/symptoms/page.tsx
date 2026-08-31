@@ -9,9 +9,9 @@ import { Photo } from "@/components/ui/Photo";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "症状から探す｜腰痛・坐骨神経痛・ヘルニア・脊柱管狭窄症・膝・首肩・頭痛・ケガ",
+  title: "症状から探す｜足立区扇・高野駅の清水接骨院",
   description:
-    "足立区扇・高野駅の清水接骨院が対応する症状の一覧。腰痛・慢性腰痛・ぎっくり腰・産後の腰痛・坐骨神経痛・椎間板ヘルニア・脊柱管狭窄症・腰椎すべり症・足のしびれ・股関節痛・膝の痛み・半月板損傷・肩こり・首の痛み・四十肩五十肩・頭痛・捻挫・スポーツによる痛みなどを症状別に解説します。",
+    "足立区扇・高野駅徒歩5分の清水接骨院が対応する症状の一覧です。腰痛・坐骨神経痛・椎間板ヘルニア・脊柱管狭窄症をはじめ、膝・首肩・頭痛・ケガまで、症状ごとに原因の考え方と医療機関を受診すべき目安をまとめています。",
   path: "/symptoms",
   ogImage: ogImages.symptoms,
   keywords: ["足立区 接骨院 症状", "腰痛", "坐骨神経痛", "椎間板ヘルニア", "脊柱管狭窄症", "膝の痛み", "肩こり", "頭痛", "捻挫"],
@@ -21,7 +21,6 @@ export default function SymptomsIndexPage() {
   return (
     <>
       <PageHero
-        en="Symptoms"
         title="症状から探す"
         lead={
           <p>

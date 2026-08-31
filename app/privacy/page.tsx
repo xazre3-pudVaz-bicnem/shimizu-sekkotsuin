@@ -61,7 +61,7 @@ const sections: { t: string; body: string[] }[] = [
 export default function PrivacyPage() {
   return (
     <>
-      <PageHero en="Privacy Policy" title="プライバシーポリシー" breadcrumb={[{ name: "プライバシーポリシー" }]} />
+      <PageHero title="プライバシーポリシー" breadcrumb={[{ name: "プライバシーポリシー" }]} />
       <section className="section">
         <div className="container-x max-w-3xl space-y-8">
           {sections.map((s) => (

@@ -10,7 +10,7 @@ export function VoiceSection() {
     <section className="section bg-mist">
       <div className="container-x">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <SectionHeading en="Voice" title="お客様の声" lead="腰痛・坐骨神経痛・脊柱管狭窄症・膝の痛みなどで来院された方の声を、ご本人の言葉のまま掲載しています。" />
+          <SectionHeading title="ご利用者の声" lead="腰痛・坐骨神経痛・脊柱管狭窄症・膝の痛みなどで来院された方の声を、ご本人の言葉のまま掲載しています。" />
           <Link href="/voice" className="btn btn-outline">
             お客様の声をすべて見る <ArrowIcon size={18} />
           </Link>

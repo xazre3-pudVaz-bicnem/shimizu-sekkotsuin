@@ -11,7 +11,7 @@ export function ColumnSection() {
     <section className="section">
       <div className="container-x">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <SectionHeading en="Column" title="身体・腰痛の専門コラム" lead="腰痛や坐骨神経痛、しびれの仕組みや、日常生活での注意点を院長監修でわかりやすく解説しています。" />
+          <SectionHeading title="身体・腰痛の専門コラム" lead="腰痛や坐骨神経痛、しびれの仕組みや、日常生活での注意点を院長監修でわかりやすく解説しています。" />
           <Link href="/column" className="btn btn-outline">
             コラム一覧を見る <ArrowIcon size={18} />
           </Link>

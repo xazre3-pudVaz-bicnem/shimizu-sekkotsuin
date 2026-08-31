@@ -14,7 +14,7 @@ export default function NotFound() {
   return (
     <section className="section">
       <div className="container-x">
-        <p className="label-en">404 Not Found</p>
+        <p className="text-sm font-bold text-brand-700">ページが見つかりません（404）</p>
         <h1 className="mt-3 text-3xl sm:text-4xl">ページが見つかりませんでした</h1>
         <p className="mt-4 max-w-2xl text-ink-soft">
           お探しのページは移動または削除された可能性があります。症状から探すか、トップページからご覧ください。

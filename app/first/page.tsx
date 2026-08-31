@@ -25,7 +25,6 @@ export default function FirstPage() {
   return (
     <>
       <PageHero
-        en="First Visit"
         title="初めての方へ"
         lead={
           <p>
@@ -38,7 +37,7 @@ export default function FirstPage() {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading en="Reservation" title="ご予約の方法" lead="LINEまたはお電話でご予約ください。当日でも空きがあればご案内できます。" />
+          <SectionHeading title="ご予約の方法" lead="LINEまたはお電話でご予約ください。当日でも空きがあればご案内できます。" />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             <div className="card p-6 sm:p-8">
               <p className="flex items-center gap-2 text-lg font-bold text-ink">
@@ -80,7 +79,7 @@ export default function FirstPage() {
 
       <section className="section bg-cream">
         <div className="container-x">
-          <SectionHeading en="Preparation" title="来院前に知っておいていただきたいこと" />
+          <SectionHeading title="来院前に知っておいていただきたいこと" />
           <ul className="mt-8 grid gap-4 md:grid-cols-3">
             {[
               { t: "服装", d: "動きやすい服装でお越しください。デニムや革など伸びにくい素材は避けていただくと施術がスムーズです。院内でのお着替えも可能です。" },
@@ -102,7 +101,7 @@ export default function FirstPage() {
 
       <section className="section bg-mist">
         <div className="container-x">
-          <SectionHeading en="Price" title="初回の料金" lead="初回はカウンセリング・身体の状態確認と施術を行います。" />
+          <SectionHeading title="初回の料金" lead="初回はカウンセリング・身体の状態確認と施術を行います。" />
           <div className="mt-8">
             <PriceTable />
           </div>
@@ -114,7 +113,7 @@ export default function FirstPage() {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading en="Before You Visit" title="先に医療機関を受診していただきたいケース" />
+          <SectionHeading title="先に医療機関を受診していただきたいケース" />
           <div className="mt-8">
             <RedFlagBox
               intro="接骨院の施術は、医療機関の検査や診断に代わるものではありません。次のような症状がある場合は、施術より先に整形外科などの医療機関を受診してください。"
@@ -134,7 +133,7 @@ export default function FirstPage() {
 
       <section className="section bg-cream">
         <div className="container-x">
-          <SectionHeading en="FAQ" title="初めての方からよくあるご質問" />
+          <SectionHeading title="初めての方からよくあるご質問" />
           <Faq items={[...faqGroups[1].items, faqGroups[0].items[0], faqGroups[0].items[2]]} className="mt-8" withSchema />
           <CtaButtons className="mt-10" />
         </div>

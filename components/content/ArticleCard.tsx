@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Article } from "@/content/types";
 import { articleCategories } from "@/content/types";
 import { Photo } from "@/components/ui/Photo";
-import { formatDate } from "@/lib/utils";
+import { articleExcerpt, formatDate } from "@/lib/utils";
 
 export function ArticleCard({ article }: { article: Article }) {
   const cat = articleCategories.find((c) => c.id === article.category);
@@ -18,7 +18,7 @@ export function ArticleCard({ article }: { article: Article }) {
             <time dateTime={article.updatedAt}>{formatDate(article.updatedAt)} 更新</time>
           </div>
           <h3 className="mt-3 text-base font-bold leading-snug text-ink group-hover:text-brand-700 sm:text-lg">{article.title}</h3>
-          <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted">{article.description}</p>
+          <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted">{articleExcerpt(article.description)}</p>
         </div>
       </Link>
     </article>

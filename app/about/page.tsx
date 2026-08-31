@@ -43,7 +43,6 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        en="About"
         title="清水接骨院について"
         lead={
           <p>
@@ -56,7 +55,7 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading en="Policy" title="清水接骨院が大切にしている3つのこと" />
+          <SectionHeading title="清水接骨院が大切にしている3つのこと" />
           <ul className="mt-10 grid gap-5 md:grid-cols-3">
             {pillars.map((p, i) => (
               <li key={p.title} className="card p-6">
@@ -72,7 +71,7 @@ export default function AboutPage() {
       <section className="section bg-cream">
         <div className="container-x grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
-            <SectionHeading en="Clinic" title="院内の様子と衛生管理" />
+            <SectionHeading title="院内の様子と衛生管理" />
             <p className="mt-6 text-base leading-[1.9] text-ink-soft sm:text-lg">
               施術はカーテンで仕切られた落ち着いた施術スペースで行います。完全予約制のため、他の患者さんと重なることが少なく、ご自身の身体のことに集中していただけます。
             </p>
@@ -104,7 +103,7 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading en="Symptoms" title="力を入れている症状" lead="腰・お尻・脚の痛みやしびれを中心に、身体の痛みについて幅広くご相談いただけます。" />
+          <SectionHeading title="力を入れている症状" lead="腰・お尻・脚の痛みやしびれを中心に、身体の痛みについて幅広くご相談いただけます。" />
           <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {primary.map((s) => (
               <li key={s.slug}>
@@ -123,7 +122,7 @@ export default function AboutPage() {
 
       <section className="section bg-mist">
         <div className="container-x">
-          <SectionHeading en="Information" title="運営者情報" />
+          <SectionHeading title="運営者情報" />
           <dl className="mt-8 max-w-3xl">
             {[
               ["名称", clinic.name],

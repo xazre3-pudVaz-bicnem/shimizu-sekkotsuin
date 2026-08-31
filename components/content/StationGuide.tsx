@@ -15,7 +15,6 @@ export function StationGuidePage({ guide }: { guide: Guide }) {
   return (
     <>
       <PageHero
-        en="Access"
         title={guide.h1}
         lead={
           <>
@@ -33,7 +32,7 @@ export function StationGuidePage({ guide }: { guide: Guide }) {
       <section className="section">
         <div className="container-x grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-14">
           <div>
-            <SectionHeading en="Route" title={`${guide.station}からの徒歩ルート`} />
+            <SectionHeading title={`${guide.station}からの徒歩ルート`} />
             <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-3xl bg-white shadow-soft">
               <iframe
                 src={guide.mapsEmbedUrl}
@@ -49,7 +48,7 @@ export function StationGuidePage({ guide }: { guide: Guide }) {
             </a>
           </div>
           <div>
-            <SectionHeading en="Steps" title="院までの流れ" />
+            <SectionHeading title="院までの流れ" />
             <ol className="mt-6 space-y-3">
               {guide.steps.map((s, i) => (
                 <li key={i} className="flex gap-3 rounded-2xl border border-line bg-white p-4">
@@ -73,7 +72,7 @@ export function StationGuidePage({ guide }: { guide: Guide }) {
       <section className="section bg-cream">
         <div className="container-x grid gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
-            <SectionHeading en="Who" title={`${guide.station}が便利な方`} />
+            <SectionHeading title={`${guide.station}が便利な方`} />
             <ul className="mt-6 space-y-2">
               {guide.forWhom.map((t) => (
                 <li key={t} className="flex gap-3 text-[15px] text-ink-soft sm:text-base">
@@ -82,7 +81,7 @@ export function StationGuidePage({ guide }: { guide: Guide }) {
                 </li>
               ))}
             </ul>
-            <SectionHeading en="Tips" title="来院前に知っておいていただきたいこと" className="mt-10" />
+            <SectionHeading title="来院前に知っておいていただきたいこと" className="mt-10" />
             <ul className="mt-6 space-y-2">
               {guide.tips.map((t) => (
                 <li key={t} className="flex gap-3 text-[15px] text-ink-soft sm:text-base">
@@ -104,7 +103,7 @@ export function StationGuidePage({ guide }: { guide: Guide }) {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading en="FAQ" title={`${guide.station}からの来院についてよくある質問`} />
+          <SectionHeading title={`${guide.station}からの来院についてよくある質問`} />
           <Faq items={guide.faq} className="mt-8" withSchema />
           <div className="mt-8 flex flex-wrap gap-3">
             {other && (

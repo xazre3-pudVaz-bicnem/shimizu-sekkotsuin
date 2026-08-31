@@ -39,7 +39,6 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
   return (
     <>
       <PageHero
-        en="Column"
         title={`${cat.name}に関するコラム`}
         lead={<p>{cat.description}。</p>}
         breadcrumb={[{ name: "コラム", href: "/column" }, { name: cat.name }]}

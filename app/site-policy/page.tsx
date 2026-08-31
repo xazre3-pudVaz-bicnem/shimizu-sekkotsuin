@@ -43,7 +43,7 @@ export default function SitePolicyPage() {
   ];
   return (
     <>
-      <PageHero en="Site Policy" title="サイトポリシー" breadcrumb={[{ name: "サイトポリシー" }]} />
+      <PageHero title="サイトポリシー" breadcrumb={[{ name: "サイトポリシー" }]} />
       <section className="section">
         <div className="container-x max-w-3xl space-y-8">
           {items.map((s) => (

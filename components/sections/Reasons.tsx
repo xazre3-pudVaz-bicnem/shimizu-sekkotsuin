@@ -20,9 +20,9 @@ export function Reasons({ compact = false }: { compact?: boolean }) {
   return (
     <section className="section bg-cream">
       <div className="container-x">
-        <SectionHeading en="Reasons" title="清水接骨院が選ばれる7つの理由" align="center" />
+        <SectionHeading title="清水接骨院が選ばれる理由" align="center" lead="地域の方に長く通っていただくために、当院が大切にしていることです。" />
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {reasons.map((r) => (
+          {reasons.slice(0, 6).map((r) => (
             <li key={r.no} className="card reveal p-6">
               <p className="font-latin text-sm font-extrabold tracking-[0.2em] text-brand-600">POINT {r.no}</p>
               <h3 className="mt-2 text-lg font-bold text-ink">{r.title}</h3>

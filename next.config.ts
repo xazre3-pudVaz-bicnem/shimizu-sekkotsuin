@@ -7,11 +7,23 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     // YouTube サムネイル（content/videos.ts に動画を登録した場合のみ使用）
     remotePatterns: [{ protocol: "https", hostname: "i.ytimg.com" }],
-    deviceSizes: [360, 414, 640, 768, 1024, 1280, 1536],
-    imageSizes: [96, 128, 260, 360, 448],
   },
   poweredByHeader: false,
   reactStrictMode: true,
+  async redirects() {
+    return [
+      // 重複インデックス防止：Vercel の共有ドメインは本番ドメインへ恒久リダイレクト
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "shimizu-sekkotsuin.vercel.app" }],
+        destination: "https://www.shimizusekkotsuin.jp/:path*",
+        permanent: true,
+      },
+      // 旧サイト（sei-kotsu.com）から移設した場合に備えた受け皿
+      { source: "/lp/koshi", destination: "/symptoms/lower-back-pain", permanent: true },
+      { source: "/lp/koshi/:path*", destination: "/symptoms/lower-back-pain", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

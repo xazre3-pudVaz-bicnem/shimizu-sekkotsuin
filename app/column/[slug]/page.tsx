@@ -10,12 +10,14 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { Photo } from "@/components/ui/Photo";
 import { LineIcon, PhoneIcon } from "@/components/ui/Icons";
 import { SupervisorBox } from "@/components/content/SupervisorBox";
+import { ReferencesBox } from "@/components/content/ReferencesBox";
 import { RelatedSymptoms } from "@/components/content/RelatedSymptoms";
 import { RelatedArticles } from "@/components/content/RelatedArticles";
 import { CtaSection } from "@/components/content/CtaSection";
 import { articleJsonLd } from "@/lib/jsonld";
 import { extractHeadings, Prose } from "@/lib/markdown";
 import { buildMetadata } from "@/lib/seo";
+import { referencesForSymptoms } from "@/content/references";
 import { formatDate, readingMinutes } from "@/lib/utils";
 
 type Params = { slug: string };
@@ -65,7 +67,7 @@ export default async function ArticlePage({ params }: { params: Promise<Params> 
       </div>
 
       <div className="container-x grid gap-12 py-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16 lg:py-12">
-        <article className="min-w-0">
+        <article className="min-w-0 lg:max-w-[800px]">
           <header>
             <div className="flex flex-wrap items-center gap-2 text-sm text-muted">
               {cat && (
@@ -127,6 +129,8 @@ export default async function ArticlePage({ params }: { params: Promise<Params> 
             <RelatedSymptoms slugs={a.relatedSymptoms} title="この記事に関連する症状ページ" />
             <RelatedArticles slugs={a.relatedArticles} exclude={a.slug} />
           </div>
+
+          <ReferencesBox items={referencesForSymptoms(a.relatedSymptoms)} className="mt-12 rounded-2xl border border-line bg-mist p-5 sm:p-6" />
 
           <div className="mt-12">
             <SupervisorBox publishedAt={a.publishedAt} updatedAt={a.updatedAt} />

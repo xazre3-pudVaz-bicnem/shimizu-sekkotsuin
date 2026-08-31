@@ -14,7 +14,7 @@ export function DoctorProfile() {
             <Photo id="director-portrait" sizes="(min-width: 1024px) 40vw, (min-width: 640px) 448px, 100vw" />
           </div>
           <div>
-            <SectionHeading en="Director" title="院長紹介" />
+            <SectionHeading title="院長紹介" />
             <p className="mt-6 text-2xl font-bold text-ink sm:text-3xl">
               {director.name}
               <span className="ml-3 text-base font-medium text-muted">

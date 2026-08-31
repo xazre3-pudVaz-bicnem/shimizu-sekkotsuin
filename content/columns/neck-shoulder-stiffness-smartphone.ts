@@ -2,7 +2,7 @@ import type { Article } from "@/content/types";
 
 export const neckShoulderStiffnessSmartphone: Article = {
   slug: "neck-shoulder-stiffness-smartphone",
-  title: "肩こり・首の痛みとスマートフォン・デスクワーク｜頭の位置が変える首肩の負担",
+  title: "肩こり・首の痛みとスマホ・デスクワーク｜頭の位置が変える負担",
   description:
     "スマートフォンやパソコンで頭が前に出ると、首と肩の筋肉にかかる負担は何倍にもなります。肩こり・首の痛み・ストレートネックの共通の背景、画面の高さと座り方の整え方、肩甲骨を動かす習慣、注意が必要なサインを、足立区扇の清水接骨院の院長（柔道整復師）が解説します。",
   category: "neck-shoulder",

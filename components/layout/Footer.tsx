@@ -7,7 +7,7 @@ import { LineIcon, PhoneIcon } from "@/components/ui/Icons";
 
 export function Footer() {
   const year = new Date().getFullYear();
-  const linkCls = "inline-flex min-h-11 items-center text-[15px] text-ink-soft hover:text-brand-700 hover:underline";
+  const linkCls = "inline-flex min-h-11 min-w-11 items-center text-base text-ink-soft hover:text-brand-700 hover:underline";
   return (
     <footer className="border-t border-line bg-cream pb-24 md:pb-0">
       <div className="container-x py-14">

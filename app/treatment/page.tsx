@@ -37,7 +37,6 @@ export default function TreatmentPage() {
   return (
     <>
       <PageHero
-        en="Treatment"
         title="施術について"
         lead={
           <p>
@@ -50,7 +49,7 @@ export default function TreatmentPage() {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading en="Features" title="清水接骨院の施術の特徴" />
+          <SectionHeading title="清水接骨院の施術の特徴" />
           <ul className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {features.map((f, i) => (
               <li key={f.title} className="card p-6">
@@ -77,7 +76,7 @@ export default function TreatmentPage() {
             </div>
           </div>
           <div>
-            <SectionHeading en="Approach" title="取り入れている考え方・手技" />
+            <SectionHeading title="取り入れている考え方・手技" />
             <p className="mt-6 text-base leading-[1.9] text-ink-soft sm:text-lg">
               腰痛の多くは、レントゲンには写らない筋肉・靭帯・筋膜などの硬さや、身体の使い方の偏りが関わっています。当院では次のような考え方を組み合わせ、痛みが出ている場所と、その負担の元になっている場所の両方に働きかけます。
             </p>
@@ -100,7 +99,7 @@ export default function TreatmentPage() {
       <section className="section bg-mist">
         <div className="container-x grid items-center gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
           <div>
-            <SectionHeading en="Foot" title="足元から身体を見る" lead="足の状態は、立ち方・歩き方を通して膝や腰の負担に影響します。" />
+            <SectionHeading title="足元から身体を見る" lead="足の状態は、立ち方・歩き方を通して膝や腰の負担に影響します。" />
             <p className="mt-6 text-base leading-[1.9] text-ink-soft sm:text-lg">
               当院では、必要に応じて足の長さ・幅の測定や足型（フットプリント）の確認を行い、横アーチの崩れや荷重の偏りなど、足元からの負担を確認しています。ご希望の方にはインソールについてもご相談いただけます。膝や腰の痛みが歩き方と関係していると考えられる場合に、身体全体を見る手がかりのひとつとして活用しています。
             </p>
@@ -119,7 +118,7 @@ export default function TreatmentPage() {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading en="Symptoms" title="施術で多くご相談いただく症状" />
+          <SectionHeading title="施術で多くご相談いただく症状" />
           <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {primary.map((s) => (
               <li key={s.slug}>
@@ -135,7 +134,7 @@ export default function TreatmentPage() {
 
       <section className="section bg-warn-bg">
         <div className="container-x">
-          <SectionHeading en="Notice" title="施術に関する注意点・リスクについて" lead="安心して施術を受けていただくために、あらかじめお読みください。" />
+          <SectionHeading title="施術に関する注意点・リスクについて" lead="安心して施術を受けていただくために、あらかじめお読みください。" />
           <ul className="mt-8 space-y-3">
             {pricing.risks.map((r) => (
               <li key={r} className="flex gap-3 rounded-2xl border border-warn-line bg-white p-4 text-[15px] leading-relaxed text-ink-soft sm:text-base">
@@ -152,7 +151,7 @@ export default function TreatmentPage() {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading en="FAQ" title="施術についてよくある質問" />
+          <SectionHeading title="施術についてよくある質問" />
           <Faq items={faqGroups[0].items} className="mt-8" withSchema />
         </div>
       </section>

@@ -2,7 +2,7 @@ import type { Article } from "@/content/types";
 
 export const howSpineAndPelvisWork: Article = {
   slug: "how-spine-and-pelvis-work",
-  title: "背骨と骨盤のしくみ｜腰に負担が集まる理由を「身体のつながり」から理解する",
+  title: "背骨と骨盤のしくみ｜腰に負担が集まる理由を知る",
   description:
     "背骨のS字カーブ、骨盤の傾き、股関節と胸椎の役割、「腰は動きすぎてはいけない場所」という考え方。腰痛・坐骨神経痛・肩こり・膝の痛みを身体全体のつながりから理解するための基礎知識を、足立区扇の清水接骨院の院長（柔道整復師）が解説します。",
   category: "body",

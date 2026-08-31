@@ -26,7 +26,6 @@ export default function ReviewPage() {
   return (
     <>
       <PageHero
-        en="Review"
         title="口コミのお願い"
         lead={
           <p>
@@ -39,7 +38,7 @@ export default function ReviewPage() {
       <section className="section">
         <div className="container-x grid gap-10 lg:grid-cols-[1fr_360px] lg:gap-16">
           <div>
-            <SectionHeading en="How to" title="Googleクチコミの書き方" />
+            <SectionHeading title="Googleクチコミの書き方" />
             <ol className="mt-6 space-y-3">
               {steps.map((s, i) => (
                 <li key={i} className="flex gap-3 rounded-2xl border border-line bg-white p-4">
@@ -82,7 +81,7 @@ export default function ReviewPage() {
 
       <section className="section bg-cream">
         <div className="container-x">
-          <SectionHeading en="Voice" title="これまでにいただいた声" lead="来院された方の声や、症状別の施術事例もご覧いただけます。" />
+          <SectionHeading title="これまでにいただいた声" lead="来院された方の声や、症状別の施術事例もご覧いただけます。" />
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/voice" className="btn btn-outline">
               お客様の声を見る

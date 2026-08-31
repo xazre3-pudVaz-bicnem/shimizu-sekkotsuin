@@ -21,7 +21,6 @@ export default function ColumnIndexPage() {
   return (
     <>
       <PageHero
-        en="Column"
         title="身体・腰痛の専門コラム"
         lead={
           <p>

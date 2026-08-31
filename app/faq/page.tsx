@@ -19,7 +19,6 @@ export default function FaqPage() {
   return (
     <>
       <PageHero
-        en="FAQ"
         title="よくある質問"
         lead={<p>施術の内容、予約や来院、料金についてよくいただくご質問をまとめました。掲載のないご質問は、お電話またはLINEでお気軽にお尋ねください。</p>}
         breadcrumb={[{ name: "よくある質問" }]}

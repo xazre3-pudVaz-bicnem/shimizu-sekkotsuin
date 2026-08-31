@@ -20,7 +20,7 @@ export function AboutClinic() {
     <section className="section">
       <div className="container-x grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="order-2 lg:order-1">
-          <SectionHeading en="About" title="清水接骨院について" />
+          <SectionHeading title="清水接骨院について" />
           <p className="mt-6 text-base leading-[1.9] text-ink-soft sm:text-lg">
             清水接骨院は、東京都足立区扇にある接骨院です。日暮里・舎人ライナー「高野駅」から徒歩5分、「扇大橋駅」から徒歩6分。腰痛や坐骨神経痛、脚のしびれなど、長く続く身体の悩みを抱えた方が多く来院されています。
           </p>

@@ -23,7 +23,6 @@ export default function CasesPage() {
   return (
     <>
       <PageHero
-        en="Cases"
         title="施術事例"
         lead={
           <>

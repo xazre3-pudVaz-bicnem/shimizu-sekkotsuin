@@ -2,7 +2,7 @@ import type { Article } from "@/content/types";
 
 export const whatIsSpondylolisthesis: Article = {
   slug: "what-is-spondylolisthesis",
-  title: "腰椎すべり症とは？変性すべり症と分離すべり症の違い・症状・付き合い方",
+  title: "腰椎すべり症とは？2つのタイプの違いと付き合い方",
   description:
     "腰の骨がずれる「腰椎すべり症」の仕組み、加齢による変性すべり症と若い頃の分離症が原因の分離すべり症の違い、脊柱管狭窄症との関係、症状、保存療法の考え方、日常で気をつけたいことを、足立区扇の清水接骨院の院長（柔道整復師）が解説します。",
   category: "lower-back",

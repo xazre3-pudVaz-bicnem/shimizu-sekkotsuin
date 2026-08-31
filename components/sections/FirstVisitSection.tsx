@@ -24,7 +24,7 @@ export function FirstVisitSection() {
   return (
     <section className="section">
       <div className="container-x">
-        <SectionHeading en="First Visit" title="初めての方へ" lead="「どんなところか分からなくて不安」という方のために、来院前に知っておいていただきたいことをまとめました。" />
+        <SectionHeading title="初めての方へ" lead="「どんなところか分からなくて不安」という方のために、来院前に知っておいていただきたいことをまとめました。" />
         <ul className="mt-10 grid gap-4 md:grid-cols-3">
           {cards.map((c) => (
             <li key={c.title} className="card reveal p-6">

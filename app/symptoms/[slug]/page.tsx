@@ -13,6 +13,7 @@ import { Photo } from "@/components/ui/Photo";
 import { AlertIcon, CheckIcon, LineIcon, PhoneIcon } from "@/components/ui/Icons";
 import { RedFlagBox } from "@/components/content/RedFlagBox";
 import { SupervisorBox } from "@/components/content/SupervisorBox";
+import { ReferencesBox } from "@/components/content/ReferencesBox";
 import { VoiceCard } from "@/components/content/VoiceCard";
 import { Faq } from "@/components/content/Faq";
 import { RelatedSymptoms } from "@/components/content/RelatedSymptoms";
@@ -22,6 +23,7 @@ import { CtaSection } from "@/components/content/CtaSection";
 import { Reasons } from "@/components/sections/Reasons";
 import { articleJsonLd } from "@/lib/jsonld";
 import { buildMetadata } from "@/lib/seo";
+import { referencesForSymptom } from "@/content/references";
 
 type Params = { slug: string };
 
@@ -141,11 +143,14 @@ export default async function SymptomPage({ params }: { params: Promise<Params> 
       </section>
 
       <div className="container-x grid gap-12 py-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16 lg:py-16">
-        <article className="min-w-0 space-y-14">
+        <article className="min-w-0 space-y-14 lg:max-w-[800px]">
           {/* 目次（スマホ用） */}
-          <nav aria-label="このページの内容" className="rounded-2xl border border-line bg-mist p-5 lg:hidden">
-            <p className="text-sm font-bold text-brand-700">このページの内容</p>
-            <ol className="mt-3 grid gap-x-4 gap-y-1 text-[15px] sm:grid-cols-2">
+          <details className="group rounded-2xl border border-line bg-mist p-5 lg:hidden">
+            <summary className="flex cursor-pointer items-center justify-between text-base font-bold text-brand-700">
+              このページの内容（目次）
+              <span aria-hidden="true" className="transition-transform group-open:rotate-180">▾</span>
+            </summary>
+            <ol className="mt-3 grid gap-x-4 gap-y-1 text-base sm:grid-cols-2">
               {toc.map((t, i) => (
                 <li key={t.id}>
                   <a href={`#${t.id}`} className="inline-flex min-h-11 items-center text-ink-soft underline-offset-4 hover:text-brand-700 hover:underline">
@@ -154,7 +159,7 @@ export default async function SymptomPage({ params }: { params: Promise<Params> 
                 </li>
               ))}
             </ol>
-          </nav>
+          </details>
 
           <Section id="concerns" title="こんなお悩みはありませんか？">
             <ul className="grid gap-2 sm:grid-cols-2">
@@ -282,6 +287,8 @@ export default async function SymptomPage({ params }: { params: Promise<Params> 
             <RelatedSymptoms slugs={s.relatedSymptoms} exclude={s.slug} />
             <RelatedArticles slugs={s.relatedArticles} />
           </div>
+
+          <ReferencesBox items={referencesForSymptom(s.slug)} className="rounded-2xl border border-line bg-mist p-5 sm:p-6" />
 
           <SupervisorBox publishedAt={s.publishedAt} updatedAt={s.updatedAt} label="このページの監修者" />
         </article>

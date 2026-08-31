@@ -2,7 +2,7 @@ import type { Article } from "@/content/types";
 
 export const drivingLowerBackPain: Article = {
   slug: "driving-lower-back-pain",
-  title: "長時間運転と腰痛｜運転席で腰がつらくなる理由とシート調整・休憩の工夫",
+  title: "長時間運転と腰痛｜シート調整と休憩のとり方",
   description:
     "長時間の運転で腰が痛くなる理由（振動・同じ姿勢・ペダル操作・シートの沈み込み）、シートの調整方法、クッションの使い方、休憩の取り方、降りたあとのケアを、足立区扇の清水接骨院の院長（柔道整復師）が解説。運転を仕事にしている方にも。",
   category: "lower-back",

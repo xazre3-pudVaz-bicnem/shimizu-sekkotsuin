@@ -48,7 +48,7 @@ const items: { t: string; body: string[] }[] = [
 export default function DisclaimerPage() {
   return (
     <>
-      <PageHero en="Disclaimer" title="免責事項" breadcrumb={[{ name: "免責事項" }]} />
+      <PageHero title="免責事項" breadcrumb={[{ name: "免責事項" }]} />
       <section className="section">
         <div className="container-x max-w-3xl space-y-8">
           {items.map((s) => (

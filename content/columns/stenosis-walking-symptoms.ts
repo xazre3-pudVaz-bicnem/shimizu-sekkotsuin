@@ -2,7 +2,7 @@ import type { Article } from "@/content/types";
 
 export const stenosisWalkingSymptoms: Article = {
   slug: "stenosis-walking-symptoms",
-  title: "脊柱管狭窄症と歩行時の症状｜歩ける距離を伸ばすための考え方",
+  title: "脊柱管狭窄症と歩行時の症状｜歩くときの腰の負担を減らす考え方",
   description:
     "脊柱管狭窄症で歩くとつらくなる理由、歩行時の症状の特徴、歩かないことで起こる悪循環、休みながら歩く方法、杖・カート・自転車の活用、腰を反らせない身体づくりまで、足立区扇の清水接骨院の院長（柔道整復師）が解説します。",
   category: "stenosis",
@@ -37,7 +37,7 @@ export const stenosisWalkingSymptoms: Article = {
 
 脊柱管狭窄症と付き合うためには、「症状が出ない範囲で、歩く総量を保つ」ことが大切です。
 
-## 歩ける距離を伸ばすための工夫
+## 歩くときの腰の負担を減らす工夫
 
 ### 休みながら歩く
 

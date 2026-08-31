@@ -22,7 +22,6 @@ export default function AccessPage() {
   return (
     <>
       <PageHero
-        en="Access"
         title="アクセス"
         lead={
           <p>
@@ -36,7 +35,7 @@ export default function AccessPage() {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading en="How to get here" title="来院方法" />
+          <SectionHeading title="来院方法" />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <div className="card p-6">
               <p className="flex items-center gap-2 text-lg font-bold text-ink">
@@ -93,7 +92,7 @@ export default function AccessPage() {
             <Photo id="clinic-exterior-evening" fill sizes="(min-width: 1024px) 40vw, 100vw" />
           </div>
           <div>
-            <SectionHeading en="Area" title="足立区扇を中心に、近隣からもお越しいただいています" />
+            <SectionHeading title="足立区扇を中心に、近隣からもお越しいただいています" />
             <p className="mt-6 text-base leading-[1.9] text-ink-soft sm:text-lg">
               清水接骨院がある足立区扇は、日暮里・舎人ライナー沿線で荒川にも近いエリアです。扇・高野・江北・西新井方面のほか、扇大橋を渡った荒川区からも通いやすい場所にあります。実際に、足立区内だけでなく荒川区から通われている方もいらっしゃいます。
             </p>

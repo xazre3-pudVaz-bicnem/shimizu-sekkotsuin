@@ -12,9 +12,9 @@ import { ExternalIcon } from "@/components/ui/Icons";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "お客様の声・施術事例｜腰痛・坐骨神経痛・脊柱管狭窄症・膝など",
+  title: "お客様の声｜足立区扇・高野駅の清水接骨院",
   description:
-    "足立区扇・高野駅の清水接骨院に来院された方の声を、症状別（腰痛・坐骨神経痛・脊柱管狭窄症・ぎっくり腰・膝の痛み・背中の痛み）にご本人の言葉のまま掲載しています。個人の感想であり、施術の結果を保証するものではありません。",
+    "足立区扇・高野駅の清水接骨院に来院された方の声を、ご本人の言葉のまま症状別に掲載しています。個人の感想であり、施術の結果や効果を保証するものではありません。症状ごとの経過は施術事例ページでご覧いただけます。",
   path: "/voice",
   keywords: ["清水接骨院 口コミ", "足立区 接骨院 口コミ", "腰痛 お客様の声", "坐骨神経痛 事例"],
 });
@@ -40,8 +40,7 @@ export default function VoicePage() {
   return (
     <>
       <PageHero
-        en="Voice"
-        title="お客様の声・施術事例"
+        title="お客様の声"
         lead={
           <>
             <p>
@@ -106,7 +105,7 @@ export default function VoicePage() {
 
       <section className="section bg-cream">
         <div className="container-x">
-          <SectionHeading en="Gallery" title="来院された方と" lead="掲載を承諾いただいた方のお写真です。" />
+          <SectionHeading title="来院された方と" lead="掲載を承諾いただいた方のお写真です。" />
           <ul className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
             {(["patient-1", "patient-2", "patient-3", "patient-4"] as const).map((id) => (
               <li key={id} className="relative aspect-square overflow-hidden rounded-2xl">

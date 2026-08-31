@@ -27,7 +27,6 @@ export default function PricePage() {
   return (
     <>
       <PageHero
-        en="Price"
         title="料金案内"
         lead={
           <p>
@@ -51,7 +50,7 @@ export default function PricePage() {
       <section className="section bg-cream">
         <div className="container-x grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
-            <SectionHeading en="Included" title="施術料に含まれるもの" />
+            <SectionHeading title="施術料に含まれるもの" />
             <ul className="mt-6 space-y-2">
               {included.map((t) => (
                 <li key={t} className="flex gap-3 rounded-xl border border-line bg-white px-4 py-3 text-[15px] text-ink sm:text-base">
@@ -88,7 +87,7 @@ export default function PricePage() {
 
       <section className="section bg-warn-bg">
         <div className="container-x">
-          <SectionHeading en="Notice" title="施術に関する注意点・リスクについて" />
+          <SectionHeading title="施術に関する注意点・リスクについて" />
           <ul className="mt-8 space-y-3">
             {pricing.risks.map((r) => (
               <li key={r} className="flex gap-3 rounded-2xl border border-warn-line bg-white p-4 text-[15px] leading-relaxed text-ink-soft sm:text-base">
@@ -102,7 +101,7 @@ export default function PricePage() {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading en="FAQ" title="料金・保険についてよくある質問" />
+          <SectionHeading title="料金・保険についてよくある質問" />
           <Faq items={[...faqGroups[2].items, faqGroups[1].items[1]]} className="mt-8" withSchema />
         </div>
       </section>

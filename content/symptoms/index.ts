@@ -60,6 +60,18 @@ export function getSymptomsByCategory(category: SymptomCategoryId): Symptom[] {
   return symptoms.filter((s) => s.category === category);
 }
 
+/** トップページの「主な症状から探す」で表示する8症状（残りは /symptoms へ誘導） */
+export const featuredSymptomSlugs = [
+  "lower-back-pain",
+  "chronic-lower-back-pain",
+  "acute-lower-back-pain",
+  "sciatica",
+  "lumbar-disc-herniation",
+  "spinal-stenosis",
+  "knee-pain",
+  "shoulder-stiffness",
+] as const;
+
 /** トップページ「腰痛を重点訴求」で使う最重要6症状 */
 export const lowerBackFocusSlugs = [
   "lower-back-pain",

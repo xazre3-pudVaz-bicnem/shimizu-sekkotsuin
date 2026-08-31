@@ -10,7 +10,6 @@ export function AccessSection({ withHeading = true }: { withHeading?: boolean })
       <div className="container-x">
         {withHeading && (
           <SectionHeading
-            en="Access"
             title="アクセス｜足立区扇・高野駅徒歩5分"
             lead="日暮里・舎人ライナー「高野駅」から徒歩5分、「扇大橋駅」から徒歩6分。緑の看板と、症状のイラストが描かれた窓が目印です。"
           />

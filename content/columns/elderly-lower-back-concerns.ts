@@ -2,7 +2,7 @@ import type { Article } from "@/content/types";
 
 export const elderlyLowerBackConcerns: Article = {
   slug: "elderly-lower-back-concerns",
-  title: "高齢者に多い腰の悩み｜「年のせい」で片付けないために知っておきたいこと",
+  title: "高齢者に多い腰の悩み｜「年のせい」で片付けないために",
   description:
     "脊柱管狭窄症、圧迫骨折、変性すべり症、筋力低下による腰痛など、高齢の方に多い腰の悩みの特徴と、注意が必要なサイン、歩ける身体を保つための考え方を、足立区扇の清水接骨院の院長（柔道整復師）が解説します。90代の方も来院される当院の視点から。",
   category: "lower-back",

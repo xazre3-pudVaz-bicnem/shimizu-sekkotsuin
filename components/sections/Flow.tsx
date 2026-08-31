@@ -9,7 +9,7 @@ export function Flow({ withHeading = true }: { withHeading?: boolean }) {
     <section className="section">
       <div className="container-x">
         {withHeading && (
-          <SectionHeading en="Flow" title="初回施術の流れ" lead="初めての方が安心して来院できるよう、初回の流れをご案内します。カウンセリングから施術後の説明まで、すべて院長が担当します。" />
+          <SectionHeading title="初回施術の流れ" lead="初めての方が安心して来院できるよう、初回の流れをご案内します。カウンセリングから施術後の説明まで、すべて院長が担当します。" />
         )}
         <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:gap-16">
           <ol className="space-y-4">

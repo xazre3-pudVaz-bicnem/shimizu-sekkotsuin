@@ -8,7 +8,7 @@ export function VideoSection() {
   return (
     <section className="section">
       <div className="container-x">
-        <SectionHeading en="Video" title="院内・施術の様子（動画）" lead="院内の雰囲気や施術の流れを動画でご覧いただけます。" />
+        <SectionHeading title="院内・施術の様子（動画）" lead="院内の雰囲気や施術の流れを動画でご覧いただけます。" />
         <ul className="mt-10 grid gap-6 md:grid-cols-2">
           {videos.map((v) => (
             <li key={v.id}>

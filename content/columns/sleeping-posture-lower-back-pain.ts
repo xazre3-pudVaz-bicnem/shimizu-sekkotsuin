@@ -2,7 +2,7 @@ import type { Article } from "@/content/types";
 
 export const sleepingPostureLowerBackPain: Article = {
   slug: "sleeping-posture-lower-back-pain",
-  title: "腰痛と睡眠姿勢｜仰向け・横向き・うつぶせ、腰に楽な寝方と寝具の選び方",
+  title: "腰痛と睡眠姿勢｜腰に楽な寝方と寝具の選び方",
   description:
     "仰向け・横向き・うつぶせ、それぞれの寝姿勢が腰に与える影響、腰痛のタイプ別に楽な寝方、クッションの使い方、マットレスや枕の選び方の考え方、寝返りの大切さを、足立区扇の清水接骨院の院長（柔道整復師）が解説します。",
   category: "self-care",
