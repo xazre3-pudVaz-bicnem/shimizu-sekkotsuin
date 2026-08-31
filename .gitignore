@@ -42,3 +42,8 @@ next-env.d.ts
 
 # 元写真（最適化前・EXIF付き）はリポジトリに含めない
 _source-photos/
+
+.vercel
+
+# サンプルはリポジトリに含める
+!.env.example
