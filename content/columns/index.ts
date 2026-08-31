@@ -26,6 +26,7 @@ import { sleepingPostureLowerBackPain } from "./sleeping-posture-lower-back-pain
 import { neckShoulderStiffnessSmartphone } from "./neck-shoulder-stiffness-smartphone";
 import { kneePainStairs } from "./knee-pain-stairs";
 import { howSpineAndPelvisWork } from "./how-spine-and-pelvis-work";
+import { postpartumBackPainHowLong } from "./postpartum-back-pain-how-long";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -56,6 +57,7 @@ const all: Article[] = [
   neckShoulderStiffnessSmartphone,
   kneePainStairs,
   howSpineAndPelvisWork,
+  postpartumBackPainHowLong,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
