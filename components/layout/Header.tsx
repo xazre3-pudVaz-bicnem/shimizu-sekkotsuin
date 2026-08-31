@@ -3,7 +3,6 @@ import { clinic } from "@/content/clinic";
 import { symptoms } from "@/content/symptoms";
 import { mainNav, policyNav, subNav } from "@/lib/nav";
 import { LineIcon, PhoneIcon } from "@/components/ui/Icons";
-import { LogoMark } from "@/components/ui/LogoMark";
 import { MobileNav } from "@/components/layout/MobileNav";
 
 export function Header() {
@@ -11,9 +10,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white">
       <div className="container-x flex h-16 items-center justify-between gap-4 lg:h-20">
-        {/* ロゴマークは装飾。リンクのアクセシブルネームは「清水接骨院」のみになる */}
-        <Link href="/" className="flex shrink-0 items-center gap-2.5">
-          <LogoMark size={40} />
+        <Link href="/" className="flex shrink-0 items-center">
           <span className="leading-tight">
             <span className="block whitespace-nowrap text-lg font-bold tracking-wide text-ink sm:text-xl">{clinic.name}</span>
             <span className="hidden whitespace-nowrap text-[11px] text-muted sm:block xl:hidden 2xl:block">足立区扇・高野駅徒歩5分｜完全予約制</span>
