@@ -27,6 +27,7 @@ import { neckShoulderStiffnessSmartphone } from "./neck-shoulder-stiffness-smart
 import { kneePainStairs } from "./knee-pain-stairs";
 import { howSpineAndPelvisWork } from "./how-spine-and-pelvis-work";
 import { postpartumBackPainHowLong } from "./postpartum-back-pain-how-long";
+import { plantarFasciitisMorningHeelPain } from "./plantar-fasciitis-morning-heel-pain";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -58,6 +59,7 @@ const all: Article[] = [
   kneePainStairs,
   howSpineAndPelvisWork,
   postpartumBackPainHowLong,
+  plantarFasciitisMorningHeelPain,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
