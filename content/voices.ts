@@ -206,6 +206,14 @@ export const voices: Voice[] = [
   },
 ];
 
+/**
+ * トップページに掲載する声。
+ * 「整形外科・他の接骨院・湿布や痛み止めをひととおり経験してもつらさが続いていた」
+ * という背景がご本人の言葉として語られていて、かつ写真の掲載があるものを選んでいる。
+ * 文章はご本人の言葉のまま。院側の見出しやまとめは付けない。
+ */
+export const homeVoiceIds = ["s-knee", "s-sciatica", "sk"] as const;
+
 export const VOICE_DISCLAIMER = "※お客様の声は個人の感想であり、施術の結果や効果を保証するものではありません。";
 
 export function getVoice(id: string): Voice | undefined {

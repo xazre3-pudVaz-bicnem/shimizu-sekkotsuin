@@ -60,19 +60,36 @@ export function getSymptomsByCategory(category: SymptomCategoryId): Symptom[] {
   return symptoms.filter((s) => s.category === category);
 }
 
-/** トップページの「主な症状から探す」で表示する8症状（残りは /symptoms へ誘導） */
+/** トップページの「特に多い症状」で表示する8症状（残りは /symptoms へ誘導） */
 export const featuredSymptomSlugs = [
   "lower-back-pain",
   "chronic-lower-back-pain",
-  "acute-lower-back-pain",
   "sciatica",
   "lumbar-disc-herniation",
   "spinal-stenosis",
+  "leg-numbness",
   "knee-pain",
   "shoulder-stiffness",
 ] as const;
 
-/** トップページ「腰痛を重点訴求」で使う最重要6症状 */
+/**
+ * カード8枚に入りきらないが、トップページからの内部リンクを維持したい症状。
+ * カードではなくテキストリンクの行として控えめに置く。
+ */
+export const secondarySymptomSlugs = [
+  "acute-lower-back-pain",
+  "hip-pain",
+  "knee-osteoarthritis",
+  "frozen-shoulder",
+  "neck-pain",
+  "straight-neck",
+  "back-pain",
+  "postpartum-back-pain",
+  "tension-headache",
+  "sports-injury",
+] as const;
+
+/** 腰まわりの最重要6症状（フッター・症状一覧など、腰痛クラスタの導線で使う） */
 export const lowerBackFocusSlugs = [
   "lower-back-pain",
   "chronic-lower-back-pain",

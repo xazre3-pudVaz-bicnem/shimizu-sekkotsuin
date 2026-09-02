@@ -27,11 +27,16 @@ export function CtaButtons({ className, align = "start", showNote = true, size =
         </a>
       </div>
       {showNote && (
-        <p className={cx("mt-3 text-sm leading-relaxed text-muted", align === "center" && "mx-auto max-w-xl")}>
-          {clinic.reservation}｜{clinic.hours.map((h) => `${h.days} ${h.time}`).join("／")}｜定休日 {clinic.closed}
-          <br />
-          {clinic.telNote}
-        </p>
+        <>
+          <p className={cx("mt-3 text-[15px] font-medium leading-relaxed text-ink-soft", align === "center" && "mx-auto max-w-xl")}>
+            「この症状でも相談できますか？」というご質問だけでも構いません。
+          </p>
+          <p className={cx("mt-2 text-sm leading-relaxed text-muted", align === "center" && "mx-auto max-w-xl")}>
+            {clinic.reservation}｜{clinic.hours.map((h) => `${h.days} ${h.time}`).join("／")}｜定休日 {clinic.closed}
+            <br />
+            {clinic.telNote}
+          </p>
+        </>
       )}
     </div>
   );

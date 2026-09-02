@@ -31,14 +31,14 @@ export function SymptomCard({ symptom, compact = false }: { symptom: Symptom; co
       className="card group flex h-full flex-col overflow-hidden transition-all hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-soft"
     >
       <span className="relative block aspect-[4/3] w-full overflow-hidden bg-white">
-        <Photo id={symptom.image} fill sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw" className="transition-transform duration-500 group-hover:scale-[1.03]" />
+        <Photo id={symptom.image} fill sizes="(min-width: 1024px) 300px, 46vw" className="transition-transform duration-500 group-hover:scale-[1.03]" />
       </span>
-      <span className="flex flex-1 flex-col p-5">
+      <span className="flex flex-1 flex-col p-4 sm:p-5">
         {cat && <span className="text-xs font-bold text-brand-600">{cat.name}</span>}
-        <span className="mt-1 text-lg font-bold text-ink sm:text-xl">{symptom.name}</span>
-        <span className="mt-2 text-sm leading-relaxed text-muted">{symptom.short}</span>
-        <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-bold text-brand-700">
-          {symptom.name}のページを見る
+        <span className="mt-1 text-base font-bold leading-snug text-ink sm:text-lg lg:text-xl">{symptom.name}</span>
+        <span className="mt-2 text-[13px] leading-relaxed text-muted sm:text-sm">{symptom.short}</span>
+        <span className="mt-auto inline-flex items-center gap-1 pt-3 text-[13px] font-bold text-brand-700 sm:pt-4 sm:text-sm">
+          詳しく見る
           <ArrowIcon size={16} className="transition-transform group-hover:translate-x-0.5" />
         </span>
       </span>

@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Concerns } from "@/components/sections/Concerns";
-import { SymptomGrid } from "@/components/sections/SymptomGrid";
-import { LowerBackFocus } from "@/components/sections/LowerBackFocus";
-import { AboutClinic } from "@/components/sections/AboutClinic";
-import { Reasons } from "@/components/sections/Reasons";
-import { DoctorProfile } from "@/components/content/DoctorProfile";
 import { VoiceSection } from "@/components/sections/VoiceSection";
+import { DirectorMessage } from "@/components/sections/DirectorMessage";
+import { Differentiators } from "@/components/sections/Differentiators";
+import { Endorsements } from "@/components/sections/Endorsements";
+import { Policies } from "@/components/sections/Policies";
+import { SymptomGrid } from "@/components/sections/SymptomGrid";
+import { TreatmentPhilosophy } from "@/components/sections/TreatmentPhilosophy";
 import { Flow } from "@/components/sections/Flow";
 import { PriceSection } from "@/components/sections/PriceSection";
 import { FaqSection } from "@/components/sections/FaqSection";
@@ -31,9 +32,13 @@ export const metadata: Metadata = buildMetadata({
 });
 
 /**
- * トップページのセクション順は「予約までの心理導線」に沿って並べている。
- * 1 ヒーロー → 2 信頼バー → 3 悩み → 4 主な症状 → 5 腰まわり → 6 施術の考え方
- * → 7 選ばれる理由 → 8 院長 → 9 声 → 10 流れ → 11 料金 → 12 FAQ → 13 アクセス → 14 コラム → 15 CTA
+ * トップページのセクション順。
+ * 「整形外科や他院に通ってもつらさが続いている方」に向けた心理導線で並べている。
+ *  1 ヒーロー（誰に向けた院か）→ 2 信頼バー → 3 悩みの言語化 → 4 同じ悩みだった方の声
+ *  → 5 院長の考え → 6 何が違うのか → 7 第三者からの推薦 → 8 大切にしていること・医療機関との役割
+ *  → 9 症状から探す → 10 施術の考え方 → 11 流れ → 12 料金 → 13 FAQ → 14 アクセス → 15 コラム → 16 CTA
+ *
+ * 長い説明文はトップに置かず、/about・/treatment・症状ページ・コラムへ内部リンクで送る。
  */
 export default function HomePage() {
   return (
@@ -41,12 +46,13 @@ export default function HomePage() {
       <Hero />
       <TrustBar />
       <Concerns />
-      <SymptomGrid />
-      <LowerBackFocus />
-      <AboutClinic />
-      <Reasons />
-      <DoctorProfile />
       <VoiceSection />
+      <DirectorMessage />
+      <Differentiators />
+      <Endorsements />
+      <Policies />
+      <SymptomGrid />
+      <TreatmentPhilosophy />
       <Flow />
       <PriceSection />
       <FaqSection />
