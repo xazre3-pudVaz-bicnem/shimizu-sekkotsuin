@@ -64,6 +64,8 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
               ))}
             </ul>
           </nav>
+          {/* 記事カードの見出しは h3。h1 から h3 へ飛ばさないよう、一覧に h2 を置く（視覚上は非表示） */}
+          <h2 className="sr-only">このカテゴリの記事一覧</h2>
           <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {list.map((a) => (
               <li key={a.slug}>

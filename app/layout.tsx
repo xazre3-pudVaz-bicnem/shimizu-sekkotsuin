@@ -48,8 +48,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" className={manrope.variable}>
       <body className="flex min-h-svh flex-col">
+        {/* キーボード操作でヘッダーのリンクを飛ばして本文へ（WCAG 2.4.1）。Tabで初めて表示される */}
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:inline-flex focus:min-h-11 focus:items-center focus:rounded-full focus:bg-brand-700 focus:px-5 focus:text-[15px] focus:font-bold focus:text-white focus:shadow-soft"
+        >
+          本文へスキップ
+        </a>
         <Header />
-        <main id="main" className="flex-1">
+        {/* tabIndex={-1} がないと、スキップリンクで飛んでもフォーカスが本文に移らない */}
+        <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">
           {children}
         </main>
         <Footer />
