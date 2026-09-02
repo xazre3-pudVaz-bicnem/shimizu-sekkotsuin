@@ -50,6 +50,12 @@ export const realPhotos = {
   "patient-3": { src: "/images/patient-3.jpg", width: 1284, height: 1276, alt: "清水接骨院の院長と来院された患者さん" },
   "patient-4": { src: "/images/patient-4.jpg", width: 1114, height: 1468, alt: "清水接骨院の院長と来院された患者さん", position: "50% 25%" },
   "patients-collage": { src: "/images/patients-collage.jpg", width: 1280, height: 1280, alt: "清水接骨院に来院された患者さんと院長の記念写真" },
+
+  /* 推薦者の顔写真（ご本人からご提供。scripts/prepare-endorser-photos.mjs で最適化） */
+  "endorser-kobayashi": { src: "/images/endorser-kobayashi.jpg", width: 667, height: 1000, alt: "かず御幸整体院 院長 小林和哉先生", position: "50% 12%" },
+  "endorser-kimura": { src: "/images/endorser-kimura.jpg", width: 704, height: 1000, alt: "たいよう鍼灸整骨院 木村有軌先生", position: "50% 8%" },
+  "endorser-ri": { src: "/images/endorser-ri.jpg", width: 1000, height: 667, alt: "北京気功整体院 院長 李光林先生", position: "70% 40%" },
+  "endorser-kajita": { src: "/images/endorser-kajita.jpg", width: 1000, height: 667, alt: "中央元気堂整体院 梶田哲平先生", position: "12% 25%" },
 } as const satisfies Record<string, ImageAsset>;
 
 export const images = { ...realPhotos, ...aiImages } as const;

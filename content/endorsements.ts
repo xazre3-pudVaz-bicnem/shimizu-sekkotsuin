@@ -1,61 +1,67 @@
+import type { ImageKey } from "@/content/images";
+
 /**
  * 同業の先生・専門家からの推薦。
  *
- * 出典: 旧腰痛LP https://shimizu.sei-kotsu.com/lp/koshi/ （2026-09-02 にHTMLを直接確認）
- * 掲載されている氏名・肩書き・推薦文をそのまま転載している。要約・改変・創作はしない。
+ * 出典: 2026-09-02 に院（オーナー）から直接いただいた4名。氏名・院名・地域・顔写真は
+ * いただいた情報をそのまま登録している。推測で肩書きや資格を補わないこと。
  *
- * 【要オーナー確認】
- *  - 3名それぞれについて、現在も掲載してよいかの許諾確認が必要（旧LP掲載時の許諾が
- *    新サイトにも及ぶかは、コード上では判断できない）。
- *  - 旧LPには推薦者の顔写真（recom-mori.jpg / recom-aramaki.jpg / recom-kosiisi.jpg）が
- *    あるが、肖像の使用許諾が確認できないため本サイトでは使用していない。
- *  - 許諾が取れた場合は public/images に配置し、content/images.ts に登録して photo を追加する。
+ * 【要オーナー確認・未対応】
+ *  - 推薦文（コメント本文）はまだいただいていない。文章を創作することはできないため、
+ *    現状は氏名・院名・地域・お写真のみを掲載している。
+ *    4名それぞれのコメントが届いたら quote に入れるだけで表示される。
+ *  - 木村先生・梶田先生は役職（院長など）の記載がなかったため付けていない。
+ *  - 梶田先生は所在地の記載がなかったため area を空にしている。
  *
- * 表現上の注意: 推薦文はご本人の見解であり、当院が効果を約束するものではない。
+ * 旧腰痛LP（https://shimizu.sei-kotsu.com/lp/koshi/）に載っていた
+ * 森康則様・荒蒔聡様・輿石隆太様は、オーナーの指示により2026-09-02に差し替えた。
+ *
+ * 表現上の注意: 推薦はご本人の見解であり、当院が効果を約束するものではない。
  * セクションに必ず ENDORSEMENT_DISCLAIMER を表示すること。
- *
- * 表記の統一: 旧LPは半角中黒（U+FF65 HALFWIDTH KATAKANA MIDDLE DOT）を使っていたが、
- * 環境によって表示が崩れるため全角中黒（U+30FB「・」）に統一している。
- * 文字幅を揃えただけで、文言そのものは一字も変えていない。
  */
 export type Endorsement = {
   id: string;
-  /** 氏名（旧LP表記のまま） */
+  /** 氏名（いただいた表記のまま） */
   name: string;
-  /** 職種・資格（旧LP表記のまま） */
-  profession: string;
-  /** 所属・肩書き（旧LP表記のまま。ない場合は省略） */
-  affiliation?: string;
-  /** 推薦文（旧LP原文のまま。改行位置のみ整理） */
-  quote: string;
+  /** 院名・肩書き（いただいた表記のまま） */
+  affiliation: string;
+  /** 所在地。記載がない場合は省略 */
+  area?: string;
+  /** ご本人の顔写真 */
+  image: ImageKey;
+  /** 推薦文。いただき次第ここに入れる（未入力の間は本文を表示しない） */
+  quote?: string;
 };
 
 export const endorsements: Endorsement[] = [
   {
-    id: "mori",
-    name: "森 康則 様",
-    profession: "ボディビルダー",
-    affiliation: "ボディメイク大会 優勝・準優勝多数",
-    quote:
-      "根本的な症状・原因に合わせた施術を行ってくれるので、数多くある整体院の中でも、清水接骨院をお勧めします。",
+    id: "kobayashi",
+    name: "小林 和哉 先生",
+    affiliation: "かず御幸整体院 院長",
+    area: "広島県福山市",
+    image: "endorser-kobayashi",
   },
   {
-    id: "aramaki",
-    name: "荒蒔 聡 様",
-    profession: "鍼灸師",
-    affiliation: "あらまき鍼灸整骨院 院長",
-    quote:
-      "清水先生は治療技術・経験に加え、“病”を診るのではなく“人”をしっかりと診て、患者様に寄り添ってくれる信頼できる先生です。",
+    id: "kimura",
+    name: "木村 有軌 先生",
+    affiliation: "たいよう鍼灸整骨院",
+    area: "京都市伏見区",
+    image: "endorser-kimura",
   },
   {
-    id: "koshiishi",
-    name: "輿石 隆太 様",
-    profession: "柔道整復師",
-    affiliation: "目黒駅前こしいし整体院 院長",
-    quote:
-      "少しでも早く清水接骨院の施術を受けて、治療方針やあなたがどう改善していくのか相談してみてください。本当に体が楽になり、また楽しい生活が待っているはずです！",
+    id: "ri",
+    name: "李 光林 先生",
+    affiliation: "北京気功整体院 院長",
+    area: "大阪府八尾市",
+    image: "endorser-ri",
+  },
+  {
+    id: "kajita",
+    name: "梶田 哲平 先生",
+    affiliation: "中央元気堂整体院",
+    image: "endorser-kajita",
   },
 ];
 
 export const ENDORSEMENT_DISCLAIMER =
-  "※推薦文は旧サイトに掲載していたものをそのまま転載しています。ご本人の見解であり、施術の結果や効果を保証するものではありません。";
+  "※推薦はご本人の見解であり、施術の結果や効果を保証するものではありません。";

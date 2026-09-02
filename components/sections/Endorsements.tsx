@@ -1,9 +1,12 @@
 import { endorsements, ENDORSEMENT_DISCLAIMER } from "@/content/endorsements";
+import { Photo } from "@/components/ui/Photo";
 import { QuoteIcon } from "@/components/ui/Icons";
 
 /**
  * 同業の先生・専門家からの推薦。
- * 文面は旧LPの原文をそのまま転載（content/endorsements.ts を参照）。
+ * 氏名・院名・地域・お写真は content/endorsements.ts（院からいただいた情報）を参照する。
+ * 推薦文（quote）が入っている先生だけコメントを表示する。文章を補って書かないこと。
+ *
  * 旧LPが推薦欄に付けていた比較優良・誇大な煽り見出しは引き継がない。
  */
 export function Endorsements() {
@@ -18,20 +21,23 @@ export function Endorsements() {
           </h2>
         </div>
 
-        <ul className="mt-10 grid gap-5 md:grid-cols-3">
+        <ul className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">
           {endorsements.map((e) => (
             <li key={e.id}>
-              <figure className="card flex h-full flex-col p-6 sm:p-7">
-                <QuoteIcon size={26} className="shrink-0 text-brand-300" />
-                <blockquote className="mt-3 flex-1 text-[15px] leading-[1.9] text-ink-soft sm:text-base">
-                  {e.quote}
-                </blockquote>
-                <figcaption className="mt-5 border-t border-line pt-4">
-                  <span className="inline-flex rounded-full bg-brand-50 px-2.5 py-1 text-xs font-bold text-brand-700">
-                    {e.profession}
-                  </span>
-                  {e.affiliation && <span className="mt-2 block text-[13px] leading-snug text-muted">{e.affiliation}</span>}
-                  <span className="mt-1 block text-base font-bold text-ink">{e.name}</span>
+              <figure className="card flex h-full flex-col overflow-hidden">
+                <div className="relative aspect-square w-full bg-white">
+                  <Photo id={e.image} fill sizes="(min-width: 1024px) 300px, 46vw" />
+                </div>
+                <figcaption className="flex flex-1 flex-col p-4 sm:p-5">
+                  <span className="text-[15px] font-bold leading-snug text-ink sm:text-base">{e.name}</span>
+                  <span className="mt-1 text-[13px] leading-snug text-brand-700">{e.affiliation}</span>
+                  {e.area && <span className="mt-0.5 text-[13px] leading-snug text-muted">{e.area}</span>}
+                  {e.quote && (
+                    <blockquote className="mt-3 flex gap-2 border-t border-line pt-3 text-[14px] leading-[1.85] text-ink-soft">
+                      <QuoteIcon size={16} className="mt-1 shrink-0 text-brand-300" />
+                      <span>{e.quote}</span>
+                    </blockquote>
+                  )}
                 </figcaption>
               </figure>
             </li>
