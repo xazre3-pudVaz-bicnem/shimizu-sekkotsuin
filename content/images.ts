@@ -6,14 +6,19 @@
  */
 import { aiImages } from "@/content/images-ai";
 
-export type ImageAsset = { src: string; width: number; height: number; alt: string };
+/**
+ * position: object-fit: cover で切り抜かれるときの表示位置（CSS object-position）。
+ * 縦長の写真を 4:3 や 16:9 の枠に入れると中央基準では顔が切れるため、
+ * 顔が枠に残る位置を写真ごとに指定する。未指定なら中央（50% 50%）。
+ */
+export type ImageAsset = { src: string; width: number; height: number; alt: string; position?: string };
 
 export const realPhotos = {
   "clinic-exterior": { src: "/images/clinic-exterior.jpg", width: 1247, height: 1313, alt: "清水接骨院の外観。緑の看板と、腰痛・膝痛など対応症状のイラストが描かれた窓が目印" },
-  "clinic-exterior-evening": { src: "/images/clinic-exterior-evening.jpg", width: 1108, height: 1477, alt: "夕方の清水接骨院の外観。入口の明かりと、のぼり旗が立っている" },
+  "clinic-exterior-evening": { src: "/images/clinic-exterior-evening.jpg", width: 1108, height: 1477, alt: "夕方の清水接骨院の外観。入口の明かりと、のぼり旗が立っている", position: "50% 35%" },
   "director-portrait": { src: "/images/director-portrait.jpg", width: 1163, height: 1407, alt: "清水接骨院 院長・清水正尊（柔道整復師）のポートレート" },
   "director-smile": { src: "/images/director-smile.jpg", width: 1567, height: 1045, alt: "屋外で笑顔を見せる清水接骨院 院長・清水正尊" },
-  "director-front-of-clinic": { src: "/images/director-front-of-clinic.jpg", width: 1045, height: 1567, alt: "清水接骨院の看板の前に立つ院長・清水正尊" },
+  "director-front-of-clinic": { src: "/images/director-front-of-clinic.jpg", width: 1045, height: 1567, alt: "清水接骨院の看板の前に立つ院長・清水正尊", position: "50% 25%" },
   "counseling-1": { src: "/images/counseling-1.jpg", width: 1567, height: 1045, alt: "初回のカウンセリングで、問診票を見ながら患者さんの話を聞く清水接骨院の院長" },
   "counseling-2": { src: "/images/counseling-2.jpg", width: 1567, height: 1045, alt: "問診票をもとに患者さんと症状について話す清水接骨院の院長" },
   "explanation-spine-1": { src: "/images/explanation-spine-1.jpg", width: 1567, height: 1045, alt: "背骨の模型を使って、身体の状態を患者さんに説明する清水接骨院の院長" },
@@ -35,15 +40,15 @@ export const realPhotos = {
   "voice-s-knee": { src: "/images/voice-s-knee.jpg", width: 1600, height: 900, alt: "清水接骨院の院長と、腰痛・坐骨神経痛・膝の痛みで来院された患者さん" },
   "voice-s-sciatica": { src: "/images/voice-s-sciatica.jpg", width: 1458, height: 1094, alt: "清水接骨院の院長と、腰痛・坐骨神経痛で来院された患者さん" },
   "voice-h": { src: "/images/voice-h.jpg", width: 1280, height: 1280, alt: "清水接骨院の院長と、腰痛・足のしびれで来院された患者さん" },
-  "voice-a": { src: "/images/voice-a.jpg", width: 900, height: 1600, alt: "清水接骨院の院長と、坐骨神経痛で来院された患者さん" },
-  "voice-sk": { src: "/images/voice-sk.jpg", width: 900, height: 1600, alt: "清水接骨院の院長と、腰痛で来院された患者さん" },
+  "voice-a": { src: "/images/voice-a.jpg", width: 900, height: 1600, alt: "清水接骨院の院長と、坐骨神経痛で来院された患者さん", position: "50% 22%" },
+  "voice-sk": { src: "/images/voice-sk.jpg", width: 900, height: 1600, alt: "清水接骨院の院長と、腰痛で来院された患者さん", position: "50% 20%" },
   "voice-sk-square": { src: "/images/voice-sk-square.jpg", width: 1280, height: 1280, alt: "清水接骨院の院長と、腰痛で来院された患者さん" },
   "voice-n": { src: "/images/voice-n.jpg", width: 1280, height: 1280, alt: "清水接骨院の院長と、坐骨神経痛で来院された患者さん" },
-  "voice-s-postpartum": { src: "/images/voice-s-postpartum.jpg", width: 900, height: 1600, alt: "清水接骨院の院長と、産後の膝の痛みで来院されたお母さんと赤ちゃん" },
+  "voice-s-postpartum": { src: "/images/voice-s-postpartum.jpg", width: 900, height: 1600, alt: "清水接骨院の院長と、産後の膝の痛みで来院されたお母さんと赤ちゃん", position: "50% 27%" },
   "patient-1": { src: "/images/patient-1.jpg", width: 1280, height: 1280, alt: "清水接骨院の院長と来院された患者さん" },
   "patient-2": { src: "/images/patient-2.jpg", width: 1600, height: 900, alt: "清水接骨院の院長と来院された患者さん" },
   "patient-3": { src: "/images/patient-3.jpg", width: 1284, height: 1276, alt: "清水接骨院の院長と来院された患者さん" },
-  "patient-4": { src: "/images/patient-4.jpg", width: 1114, height: 1468, alt: "清水接骨院の院長と来院された患者さん" },
+  "patient-4": { src: "/images/patient-4.jpg", width: 1114, height: 1468, alt: "清水接骨院の院長と来院された患者さん", position: "50% 25%" },
   "patients-collage": { src: "/images/patients-collage.jpg", width: 1280, height: 1280, alt: "清水接骨院に来院された患者さんと院長の記念写真" },
 } as const satisfies Record<string, ImageAsset>;
 

@@ -77,9 +77,11 @@ export default function CasesPage() {
                         const v = getVoice(c.voiceId);
                         return (
                           <li key={c.id} id={c.id} className="card flex h-full flex-col overflow-hidden scroll-mt-24">
+                            {/* 16:9 だと縦の切り抜きが強く、縦長の記念写真で顔が切れるため 4:3。
+                                切り抜き位置は content/images.ts の position で写真ごとに指定している */}
                             {v?.image && (
-                              <div className="relative aspect-[16/9] w-full bg-mist">
-                                <Photo id={v.image} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-[center_30%]" />
+                              <div className="relative aspect-[4/3] w-full bg-mist">
+                                <Photo id={v.image} fill sizes="(min-width: 768px) 50vw, 100vw" />
                               </div>
                             )}
                             <div className="flex flex-1 flex-col p-5 sm:p-6">
