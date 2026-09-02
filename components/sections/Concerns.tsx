@@ -15,8 +15,8 @@ export function Concerns() {
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-14">
           <div>
             <h2 className="text-[1.75rem] leading-[1.4] text-ink sm:text-[2.125rem]">
-              <span className="inline-block">「何をしても変わらない」と</span>
-              <span className="inline-block">感じていませんか？</span>
+              <span className="inline-block">いろいろ試したけれど、</span>
+              <span className="inline-block">変わらないと感じていませんか？</span>
             </h2>
             <p className="mt-4 max-w-xl text-base leading-[1.8] text-ink-soft sm:text-[17px]">
               ひとつでも当てはまる方は、我慢せずにご相談ください。当てはまる項目から、症状ごとの詳しいページへ進めます。

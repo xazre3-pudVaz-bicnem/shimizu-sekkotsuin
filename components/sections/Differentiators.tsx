@@ -10,7 +10,7 @@ import { ArrowIcon, CheckIcon } from "@/components/ui/Icons";
  */
 export function Differentiators() {
   return (
-    <section className="section bg-cream">
+    <section className="section bg-white">
       <div className="container-x">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold tracking-wide text-brand-700">清水接骨院の方針</p>

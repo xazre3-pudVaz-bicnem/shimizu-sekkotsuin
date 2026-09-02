@@ -9,7 +9,7 @@ const items = [
   { label: "国家資格", value: "柔道整復師" },
   { label: "施術歴", value: director.careerYears },
   { label: "累計施術経験", value: "10万件超" },
-  { label: "担当", value: "最初から最後まで院長" },
+  { label: "毎回", value: "院長本人が担当" },
 ];
 
 export function TrustBar() {

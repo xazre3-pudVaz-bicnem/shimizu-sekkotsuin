@@ -15,7 +15,7 @@ export function VoiceSection() {
         <div className="flex flex-wrap items-end justify-between gap-5">
           <div>
             <h2 className="text-[1.75rem] leading-[1.4] text-ink sm:text-[2.125rem]">
-              <span className="inline-block">同じように悩んでいた方が、</span>
+              <span className="inline-block">同じように、長く悩まれていた方が</span>
               <span className="inline-block">来院されています</span>
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-[1.8] text-ink-soft sm:text-[17px]">

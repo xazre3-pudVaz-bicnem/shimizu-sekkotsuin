@@ -1,53 +1,31 @@
 import Link from "next/link";
-import { policies, roleRows, ROLE_NOTE } from "@/content/policies";
+import { roleRows, ROLE_NOTE } from "@/content/policies";
 import { ArrowIcon } from "@/components/ui/Icons";
 
 /**
- * 「清水接骨院が大切にしていること」＋「医療機関と接骨院の役割の違い」。
+ * 「医療機関と接骨院は、役割が違います」。
  *
- * 旧LPの「当院／病院／整骨院」比較表は、他院・医療機関を一括して劣って見せる
- * 比較優良表現にあたるため復活させていない。ここでは
- *  (1) 当院の方針だけを項目ごとに示す
- *  (2) 医療機関との違いを「優劣」ではなく「役割」として説明する
- * の2段構成にしている。医療機関を否定する記述を足さないこと。
+ * 旧LPの「当院／病院／整骨院」比較表は比較優良表現にあたるため復活させていない。
+ * ここでは優劣ではなく役割の違いとして説明し、必要な場合は受診を勧める姿勢を明示する。
+ * 当院の方針そのものは Differentiators（4POINT）で扱うので、ここで繰り返さない。
  */
 export function Policies() {
   return (
     <section className="section bg-mist">
       <div className="container-x">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-[1.75rem] leading-[1.4] text-ink sm:text-[2.125rem]">
-            <span className="inline-block">清水接骨院が</span>
-            <span className="inline-block">大切にしている4つのこと</span>
-          </h2>
-        </div>
-
-        <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-3xl border border-line bg-white shadow-card">
-          <dl>
-            {policies.map((p, i) => (
-              <div
-                key={p.item}
-                className={`grid gap-1 p-5 sm:grid-cols-[190px_1fr] sm:items-center sm:gap-6 sm:p-6 ${i > 0 ? "border-t border-line" : ""}`}
-              >
-                <dt className="flex items-center gap-2.5 text-[15px] font-bold text-brand-800 sm:text-base">
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" aria-hidden="true" />
-                  {p.item}
-                </dt>
-                <dd className="text-[15px] leading-[1.85] text-ink-soft sm:text-base">{p.policy}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-
-        {/* 医療機関との役割の違い */}
-        <div className="mx-auto mt-14 max-w-4xl">
-          <h3 className="text-xl font-bold leading-snug text-ink sm:text-2xl">医療機関と接骨院は、役割が違います</h3>
-          <p className="mt-3 text-[15px] leading-[1.85] text-ink-soft sm:text-base">
-            どちらが優れているという話ではありません。できることが違うので、必要に応じて使い分けていただくのが一番だと考えています。
-          </p>
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center">
+            <h2 className="text-[1.75rem] leading-[1.4] text-ink sm:text-[2.125rem]">
+              <span className="inline-block">医療機関と接骨院は、</span>
+              <span className="inline-block">役割が違います</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-[1.85] text-ink-soft sm:text-[17px]">
+              どちらが優れているという話ではありません。できることが違うので、必要に応じて使い分けていただくのが一番だと考えています。
+            </p>
+          </div>
 
           {/* PC：表。スマホ：横スクロールさせると右列（当院）を見落とすため、行ごとのカードに切り替える */}
-          <div className="mt-6 hidden md:block">
+          <div className="mt-10 hidden md:block">
             <table className="w-full border-collapse overflow-hidden rounded-2xl bg-white text-left shadow-card">
               <thead>
                 <tr className="bg-brand-50">
@@ -76,7 +54,7 @@ export function Policies() {
             </table>
           </div>
 
-          <ul className="mt-6 space-y-3 md:hidden">
+          <ul className="mt-8 space-y-3 md:hidden">
             {roleRows.map((r) => (
               <li key={r.scene} className="overflow-hidden rounded-2xl bg-white shadow-card">
                 <p className="bg-brand-50 px-4 py-2.5 text-[14px] font-bold text-brand-800">{r.scene}</p>

@@ -35,10 +35,13 @@ export const metadata: Metadata = buildMetadata({
  * トップページのセクション順。
  * 「整形外科や他院に通ってもつらさが続いている方」に向けた心理導線で並べている。
  *  1 ヒーロー（誰に向けた院か）→ 2 信頼バー → 3 悩みの言語化 → 4 同じ悩みだった方の声
- *  → 5 院長の考え → 6 何が違うのか → 7 第三者からの推薦 → 8 大切にしていること・医療機関との役割
- *  → 9 症状から探す → 10 施術の考え方 → 11 流れ → 12 料金 → 13 FAQ → 14 アクセス → 15 コラム → 16 CTA
+ *  → 5 何が違うのか（4POINT）→ 6 第三者からの推薦 → 7 院長の考え → 8 症状から探す
+ *  → 9 施術の考え方 → 10 医療機関との役割の違い → 11 流れ → 12 料金 → 13 FAQ
+ *  → 14 アクセス → 15 コラム → 16 CTA
  *
  * 長い説明文はトップに置かず、/about・/treatment・症状ページ・コラムへ内部リンクで送る。
+ * 施術歴30年以上・累計10万件超・院長が毎回担当・身体全体を確認・ソフトな手技は
+ * 同じ説明を何度も読ませないよう、担当セクションを1つに決めて他では繰り返さない。
  */
 export default function HomePage() {
   return (
@@ -47,12 +50,12 @@ export default function HomePage() {
       <TrustBar />
       <Concerns />
       <VoiceSection />
-      <DirectorMessage />
       <Differentiators />
       <Endorsements />
-      <Policies />
+      <DirectorMessage />
       <SymptomGrid />
       <TreatmentPhilosophy />
+      <Policies />
       <Flow />
       <PriceSection />
       <FaqSection />

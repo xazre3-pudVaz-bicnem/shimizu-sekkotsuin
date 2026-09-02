@@ -8,7 +8,7 @@ import { QuoteIcon } from "@/components/ui/Icons";
  */
 export function Endorsements() {
   return (
-    <section className="section bg-white">
+    <section className="section bg-cream">
       <div className="container-x">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold tracking-wide text-brand-700">第三者からの評価</p>

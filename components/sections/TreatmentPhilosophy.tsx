@@ -1,18 +1,16 @@
 import Link from "next/link";
+import { director } from "@/content/clinic";
 import { Photo } from "@/components/ui/Photo";
 import { ArrowIcon } from "@/components/ui/Icons";
 
 /**
- * 施術の考え方。トップページでは要点だけを短く示し、
- * 詳しい説明は /treatment・/about・症状ページへ内部リンクで送る。
- * （長文はトップに置かず、クラスタ側のページに集約する方針）
+ * 施術の考え方。
+ *
+ * 重複対策: 「腰だけを見ない」「強く押さない」「院長が担当」は
+ * TrustBar と Differentiators（4POINT）で既に述べているため、ここでは繰り返さない。
+ * このセクションでしか出てこない情報＝実際に取り入れている手技の考え方
+ * （content/clinic.ts の director.methods）を置き、詳細は /treatment へ送る。
  */
-const points = [
-  { title: "腰だけを見ない", text: "腰の負担の背景に、股関節・背中・足元の使い方や長年の姿勢の癖が重なっていることがあります。" },
-  { title: "強く押さない", text: "筋膜・筋肉・骨格のバランスにやさしく働きかける手技です。無理に身体を鳴らすことはしません。" },
-  { title: "その日の状態に合わせる", text: "決まった手順を当てはめるのではなく、来院時の姿勢や動きを確認してから内容を組み立てます。" },
-];
-
 export function TreatmentPhilosophy() {
   return (
     <section className="section bg-brand-900 text-white">
@@ -25,14 +23,14 @@ export function TreatmentPhilosophy() {
               <span className="inline-block">結果かもしれません</span>
             </h2>
             <p className="mt-5 text-base leading-[1.85] text-brand-100 sm:text-[17px]">
-              腰痛・坐骨神経痛・椎間板ヘルニア・脊柱管狭窄症など、腰まわりの症状を中心に施術を行ってきました。身体全体の状態を確認し、負担の元になっている部分にも働きかけます。
+              腰痛・坐骨神経痛・椎間板ヘルニア・脊柱管狭窄症など、腰まわりの症状を中心に施術を行ってきました。その日の姿勢や動きを確認してから、負担の元になっている部分に働きかけます。
             </p>
 
-            <ul className="mt-7 space-y-4">
-              {points.map((p) => (
-                <li key={p.title} className="border-l-2 border-brand-500 pl-4">
-                  <p className="text-[17px] font-bold text-white">{p.title}</p>
-                  <p className="mt-1 text-[15px] leading-relaxed text-brand-100">{p.text}</p>
+            <p className="mt-8 text-sm font-bold text-brand-200">取り入れている考え方</p>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {director.methods.map((m) => (
+                <li key={m} className="rounded-full border border-brand-700 bg-brand-800/70 px-3.5 py-2 text-[14px] font-medium text-brand-50">
+                  {m}
                 </li>
               ))}
             </ul>
