@@ -20,7 +20,7 @@ export function Policies() {
               <span className="inline-block">役割が違います</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-[1.85] text-ink-soft sm:text-[17px]">
-              どちらが優れているという話ではありません。できることが違うので、必要に応じて使い分けていただくのが一番だと考えています。
+              どちらが優れているという話ではありません。できることが違うので、必要に応じて使い分けてください。
             </p>
           </div>
 

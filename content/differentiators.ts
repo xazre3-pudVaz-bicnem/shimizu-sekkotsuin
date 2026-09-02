@@ -26,7 +26,6 @@ export const differentiators: Differentiator[] = [
     points: [
       "腰の負担の背景に、股関節や背中、足元の使い方があることも",
       "長年の姿勢の癖が重なって、負担が一か所に集まっていないかを見ます",
-      "確認した内容は、模型や図を使ってその場でお伝えします",
     ],
     image: "check-shoulder",
   },
@@ -37,7 +36,6 @@ export const differentiators: Differentiator[] = [
     points: [
       "前回からの身体の変化を、同じ手で確認できます",
       "担当が変わるたびに、説明をやり直す必要がありません",
-      "完全予約制のため、落ち着いた環境で受けていただけます",
     ],
     image: "counseling-1",
   },
@@ -48,7 +46,6 @@ export const differentiators: Differentiator[] = [
     points: [
       "ご自宅でできるセルフケア・ストレッチをお伝えします",
       "座り方・立ち方など、日常の身体の使い方まで具体的に",
-      "通院の合間の疑問は、LINEや電話でもご相談いただけます",
     ],
     image: "explanation-spine-2",
   },
@@ -57,7 +54,6 @@ export const differentiators: Differentiator[] = [
     title: "30年以上の施術経験",
     lead: "柔道整復師として30年以上、累計10万件を超える施術に携わってきました。",
     points: [
-      "腰・お尻・脚の痛みやしびれのご相談が特に多い院です",
       "強く押したり、無理に身体を鳴らしたりしないソフトな手技",
       "必要と判断した場合は、医療機関の受診をお勧めします",
     ],

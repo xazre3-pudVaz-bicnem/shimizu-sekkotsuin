@@ -5,7 +5,7 @@ type Props = { title?: string; text?: string };
 
 export function CtaSection({
   title = "あきらめてしまう前に、一度ご相談ください",
-  text = "予約を決めていなくても構いません。身体の状態を確認したうえで、当院でできることと、医療機関で確認していただきたいことを分けてお伝えします。",
+  text = "予約を決めていなくても構いません。当院でできることと、医療機関で確認していただきたいことを分けてお伝えします。",
 }: Props) {
   return (
     <section className="bg-brand-800 text-white">

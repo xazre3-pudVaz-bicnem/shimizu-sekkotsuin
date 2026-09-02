@@ -4,7 +4,8 @@ import { articleCategories } from "@/content/types";
 import { Photo } from "@/components/ui/Photo";
 import { articleExcerpt, formatDate } from "@/lib/utils";
 
-export function ArticleCard({ article }: { article: Article }) {
+/** compact: トップページ用。抜粋を省いてタイトルだけにする（一覧ページでは抜粋を出す） */
+export function ArticleCard({ article, compact = false }: { article: Article; compact?: boolean }) {
   const cat = articleCategories.find((c) => c.id === article.category);
   return (
     <article className="card group flex h-full flex-col overflow-hidden transition-all hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-soft">
@@ -18,7 +19,7 @@ export function ArticleCard({ article }: { article: Article }) {
             <time dateTime={article.updatedAt}>{formatDate(article.updatedAt)} 更新</time>
           </div>
           <h3 className="mt-3 text-base font-bold leading-snug text-ink group-hover:text-brand-700 sm:text-lg">{article.title}</h3>
-          <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted">{articleExcerpt(article.description)}</p>
+          {!compact && <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted">{articleExcerpt(article.description)}</p>}
         </div>
       </Link>
     </article>

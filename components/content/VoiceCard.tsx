@@ -4,8 +4,12 @@ import { getSymptom } from "@/content/symptoms";
 import { Photo } from "@/components/ui/Photo";
 import { QuoteIcon } from "@/components/ui/Icons";
 
+/**
+ * excerpt: 一覧用の抜粋表示。トップでは本文が長くなりすぎるため1段落＋4行までに切り、
+ * 続きは「声をすべて読む」から /voice へ送る（文章はHTMLに残るのでSEOには影響しない）。
+ */
 export function VoiceCard({ voice, excerpt = false }: { voice: Voice; excerpt?: boolean }) {
-  const paragraphs = excerpt ? voice.body.slice(0, 2) : voice.body;
+  const paragraphs = excerpt ? voice.body.slice(0, 1) : voice.body;
   return (
     <article id={`voice-${voice.id}`} className="card flex h-full flex-col overflow-hidden scroll-mt-24">
       {voice.image && (
@@ -28,10 +32,12 @@ export function VoiceCard({ voice, excerpt = false }: { voice: Voice; excerpt?: 
         </p>
         <div className="mt-3 space-y-2 text-[15px] leading-relaxed text-ink-soft">
           {paragraphs.map((p, i) => (
-            <p key={i}>{p}</p>
+            <p key={i} className={excerpt ? "line-clamp-4" : undefined}>
+              {p}
+            </p>
           ))}
         </div>
-        {excerpt && voice.body.length > 2 && (
+        {excerpt && voice.body.length > 1 && (
           <Link href={`/voice#voice-${voice.id}`} className="mt-2 inline-flex min-h-11 items-center self-start text-sm font-bold text-brand-700 underline-offset-4 hover:underline">
             {voice.who}の声をすべて読む
           </Link>

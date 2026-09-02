@@ -16,9 +16,6 @@ export function Endorsements() {
             <span className="inline-block">同業の先生・専門家からも</span>
             <span className="inline-block">推薦をいただいています</span>
           </h2>
-          <p className="mt-4 text-base leading-[1.8] text-ink-soft sm:text-[17px]">
-            鍼灸師・柔道整復師など、身体をみる仕事をしている方からいただいた言葉です。
-          </p>
         </div>
 
         <ul className="mt-10 grid gap-5 md:grid-cols-3">

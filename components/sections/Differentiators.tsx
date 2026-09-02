@@ -15,7 +15,9 @@ export function Differentiators() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold tracking-wide text-brand-700">清水接骨院の方針</p>
           <h2 className="mt-3 text-[1.75rem] leading-[1.4] text-ink sm:text-[2.125rem]">
-            <span className="inline-block">なぜ、他で変わらなかった方が</span>
+            {/* スマホで語の途中から折り返さないよう、短い塊に分けている */}
+            <span className="inline-block">なぜ、他で</span>
+            <span className="inline-block">変わらなかった方が</span>
             <span className="inline-block">清水接骨院を訪れるのか</span>
           </h2>
         </div>
@@ -26,7 +28,8 @@ export function Differentiators() {
               key={d.no}
               className="grid items-center gap-6 lg:grid-cols-2 lg:gap-14"
             >
-              <div className={`relative aspect-[4/3] overflow-hidden rounded-3xl bg-mist shadow-soft ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+              {/* スマホは写真4枚で縦に伸びるため16:9。PCは横並びなので4:3のまま */}
+              <div className={`relative aspect-[16/9] overflow-hidden rounded-3xl bg-mist shadow-soft lg:aspect-[4/3] ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                 <Photo id={d.image} fill sizes="(min-width: 1024px) 46vw, 100vw" />
               </div>
 

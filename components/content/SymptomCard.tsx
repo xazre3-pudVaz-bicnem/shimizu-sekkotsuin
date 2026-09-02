@@ -36,7 +36,7 @@ export function SymptomCard({ symptom, compact = false }: { symptom: Symptom; co
       <span className="flex flex-1 flex-col p-4 sm:p-5">
         {cat && <span className="text-xs font-bold text-brand-600">{cat.name}</span>}
         <span className="mt-1 text-base font-bold leading-snug text-ink sm:text-lg lg:text-xl">{symptom.name}</span>
-        <span className="mt-2 text-[13px] leading-relaxed text-muted sm:text-sm">{symptom.short}</span>
+        <span className="mt-2 line-clamp-2 text-[13px] leading-relaxed text-muted sm:text-sm">{symptom.short}</span>
         <span className="mt-auto inline-flex items-center gap-1 pt-3 text-[13px] font-bold text-brand-700 sm:pt-4 sm:text-sm">
           詳しく見る
           <ArrowIcon size={16} className="transition-transform group-hover:translate-x-0.5" />

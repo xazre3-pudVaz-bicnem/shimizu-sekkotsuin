@@ -56,7 +56,7 @@ export default function HomePage() {
       <SymptomGrid />
       <TreatmentPhilosophy />
       <Policies />
-      <Flow />
+      <Flow compact />
       <PriceSection />
       <FaqSection />
       <AccessSection />
