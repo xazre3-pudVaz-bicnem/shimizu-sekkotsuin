@@ -29,6 +29,7 @@ import { howSpineAndPelvisWork } from "./how-spine-and-pelvis-work";
 import { postpartumBackPainHowLong } from "./postpartum-back-pain-how-long";
 import { plantarFasciitisMorningHeelPain } from "./plantar-fasciitis-morning-heel-pain";
 import { frozenShoulderThreePhases } from "./frozen-shoulder-three-phases";
+import { kneeEffusionWhyWater } from "./knee-effusion-why-water";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -62,6 +63,7 @@ const all: Article[] = [
   postpartumBackPainHowLong,
   plantarFasciitisMorningHeelPain,
   frozenShoulderThreePhases,
+  kneeEffusionWhyWater,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
