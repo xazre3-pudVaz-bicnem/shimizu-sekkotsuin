@@ -23,9 +23,10 @@ const BACKUP = "_source-photos/endorsers";
 const MAP = [
   { src: "S__78217224.jpg", out: "endorser-kobayashi.jpg", whiteFill: false },
   { src: "52780.jpg", out: "endorser-kimura.jpg", whiteFill: true },
-  { src: "6968.jpg", out: "endorser-ri.jpg", whiteFill: false },
+  // 引きの写真なので、正方形の枠に入れても顔が小さくならないよう先生の周りを切り出す
+  { src: "6968.jpg", out: "endorser-ri.jpg", whiteFill: false, crop: { left: 560, top: 120, width: 800, height: 800 } },
   // ファイル名の「のコピー」が濁点分解（NFD）で保存されているため、名前ではなくパターンで探す
-  { match: /^_D0A1742/, out: "endorser-kajita.jpg", whiteFill: false },
+  { match: /^_D0A1742/, out: "endorser-kajita.jpg", whiteFill: false, crop: { left: 150, top: 250, width: 1500, height: 1500 } },
 ];
 
 /** 外周から届く「ほぼ黒」の領域だけを白に置き換える */
@@ -87,18 +88,22 @@ function feather(data, seen, width, height, channels) {
 
 fs.mkdirSync(BACKUP, { recursive: true });
 
-const entries = fs.readdirSync(DIR);
+/** 元ファイルは public/images か、すでに退避済みなら _source-photos/endorsers から読む */
+const dirsToSearch = [DIR, BACKUP].filter((d) => fs.existsSync(d));
+const entries = dirsToSearch.flatMap((d) => fs.readdirSync(d).map((f) => ({ dir: d, file: f })));
 
 for (const item of MAP) {
   const { out } = item;
-  const src = item.src ?? entries.find((f) => item.match.test(f));
-  const from = src ? path.join(DIR, src) : "";
+  const hit = item.src ? entries.find((e) => e.file === item.src) : entries.find((e) => item.match.test(e.file));
+  const src = hit?.file;
+  const from = hit ? path.join(hit.dir, hit.file) : "";
   if (!src || !fs.existsSync(from)) {
     console.log(`skip（元ファイルなし）: ${item.src ?? item.match}`);
     continue;
   }
   const meta = await sharp(from).metadata();
-  const resized = sharp(from).resize({ width: 1000, height: 1000, fit: "inside", withoutEnlargement: true });
+  const base = item.crop ? sharp(from).extract(item.crop) : sharp(from);
+  const resized = base.resize({ width: 1000, height: 1000, fit: "inside", withoutEnlargement: true });
 
   let pipeline = resized;
   if (item.whiteFill) {
@@ -113,7 +118,7 @@ for (const item of MAP) {
   const after = await sharp(to).metadata();
   console.log(`${src} (${meta.width}x${meta.height}) → ${out} (${after.width}x${after.height}, ${Math.round(fs.statSync(to).size / 1024)}KB)`);
 
-  fs.renameSync(from, path.join(BACKUP, src));
+  if (hit.dir !== BACKUP) fs.renameSync(from, path.join(BACKUP, src));
 }
 
 console.log("完了。元ファイルは", BACKUP, "に退避しました");
