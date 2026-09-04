@@ -7,19 +7,19 @@ import { Photo } from "@/components/ui/Photo";
  * 旧LPから引き継がなかったもの
  *  ・「根本から改善！」…効果の保証・断定にあたるため使用しない
  *  ・「腰痛に特化した専門整体」…接骨院での「専門」標榜・整体表記は避ける
- *  ・「専門家も多数推薦」…実在の推薦は3名なので「多数」とは書けない
+ *  ・「専門家も多数推薦」…実在の推薦は4名なので「多数」とは書けない
  *  ・王冠アイコン…順位を連想させ比較優良に読まれうるのでチェックアイコンにする
  *
  * SEO: H1に「腰の痛み・しびれ」と「足立区扇・高野駅の清水接骨院」を残し、
  * 症状タグで慢性腰痛・坐骨神経痛・椎間板ヘルニア・脊柱管狭窄症を自然に含める。
  *
- * 写真の構図（1567×1045）
- *   ・左およそ1/3：無地のカーテン（テキストを載せる余白）
- *   ・院長の顔：横 37〜51% / 縦 9〜36%　・施術している手元：横 64〜82% / 縦 54〜71%
- * PCは横幅基準で拡大されるため縦位置（22%前後）で、
- * スマホは高さ基準で拡大されるため横位置（52%前後）で顔と手元が画面に残るようにしている。
+ * 写真の出し方（treatment-knee.jpg は 1567×1045 ＝ ちょうど 3:2）
+ *  ・スマホ／タブレット: 幅いっぱいの 3:2 の帯。写真の縦横比と一致するので切り抜きが起きず、
+ *    施術の様子が端まで全部見える。テキストはその下の白地に置く。
+ *  ・PC: セクション全面の背景。横長に引き伸ばす分だけ縦が切れるため、
+ *    院長の顔（縦 9〜30%）と手元（縦 53〜65%）が残る位置（縦20%）に寄せている。
+ *    左側は白〜薄緑のグラデーションを重ねて文字を読めるようにする。
  */
-/** 旧LPと同じ4症状。「椎間板ヘルニア」は横幅の都合で短縮（正式名は症状ページ・症状カードに掲載） */
 const tags = ["慢性腰痛", "ヘルニア", "坐骨神経痛", "脊柱管狭窄症"];
 
 /** content/clinic.ts の director.methods のうち、来院前の方に伝わる2つ */
@@ -27,31 +27,30 @@ const methods = ["筋膜・筋肉へのソフトな手技", "骨格・骨盤の�
 
 const badges = ["高野駅から徒歩5分", "国家資格の院長が毎回担当", "施術歴30年以上・10万件超"];
 
-/** スマホ・タブレット：写真の下半分を白へなじませ、その上に文字を置く */
-const gradientMobile =
-  "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.04) 16%, rgba(246,250,247,0.6) 28%, rgba(252,254,252,0.96) 40%, rgb(255,255,255) 52%)";
 /** PC：左から右へ白〜薄緑を薄くして、左側で文字が完全に読めるようにする */
 const gradientDesktop =
-  "linear-gradient(90deg, rgba(246,251,248,0.99) 0%, rgba(247,251,249,0.98) 30%, rgba(250,253,251,0.86) 48%, rgba(255,255,255,0.34) 66%, rgba(255,255,255,0.03) 84%, rgba(255,255,255,0) 100%)";
+  "linear-gradient(90deg, rgba(246,251,248,0.99) 0%, rgba(247,251,249,0.98) 30%, rgba(250,253,251,0.88) 48%, rgba(255,255,255,0.4) 66%, rgba(255,255,255,0.06) 84%, rgba(255,255,255,0) 100%)";
 
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-white">
-      {/* 背景写真（LCP対象） */}
-      <div className="absolute inset-0 -z-10">
+      {/*
+        写真（LCP対象）。img は1枚だけで、スマホは上部の帯・PCは全面背景に切り替える。
+        スマホの aspect-[3/2] は写真の縦横比と同じなので、object-cover でも一切切り抜かれない。
+      */}
+      <div className="relative aspect-[3/2] w-full lg:absolute lg:inset-0 lg:-z-10 lg:aspect-auto">
         <Photo
-          id="check-lower-back"
+          id="treatment-knee"
           fill
           priority
           sizes="100vw"
           quality={82}
-          className="object-cover object-[52%_center] lg:object-[50%_22%]"
+          className="object-cover object-center lg:object-[50%_20%]"
         />
-        <div aria-hidden="true" className="absolute inset-0 lg:hidden" style={{ background: gradientMobile }} />
         <div aria-hidden="true" className="absolute inset-0 hidden lg:block" style={{ background: gradientDesktop }} />
       </div>
 
-      <div className="container-x flex min-h-[700px] flex-col justify-end pb-10 pt-10 sm:min-h-[700px] sm:pb-14 lg:min-h-[700px] lg:justify-center lg:pb-0 lg:pt-0 xl:min-h-[720px]">
+      <div className="container-x flex flex-col pb-12 pt-7 sm:pb-14 sm:pt-9 lg:min-h-[700px] lg:justify-center lg:pb-0 lg:pt-0 xl:min-h-[720px]">
         <div className="max-w-[620px]">
           {/* 症状タグ */}
           <ul className="flex flex-wrap gap-1.5">
@@ -83,8 +82,7 @@ export function Hero() {
 
           {/*
             施術の掛け合わせと実績バッジ。
-            スマホは院長の顔を隠さないよう、枠を外して文字だけで詰めて表示する。
-            sm 以上ではピル・カードとして見せる。
+            スマホは枠を外して文字だけで詰め、sm 以上ではピル・カードとして見せる。
           */}
           <p className="mt-4 text-[14px] font-bold leading-[1.9] text-ink-soft sm:mt-5 sm:text-[15px] sm:leading-normal">
             {methods.map((m, i) => (
