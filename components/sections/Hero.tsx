@@ -13,12 +13,12 @@ import { Photo } from "@/components/ui/Photo";
  * SEO: H1に「腰の痛み・しびれ」と「足立区扇・高野駅の清水接骨院」を残し、
  * 症状タグで慢性腰痛・坐骨神経痛・椎間板ヘルニア・脊柱管狭窄症を自然に含める。
  *
- * 写真の出し方（treatment-knee.jpg は 1567×1045 ＝ ちょうど 3:2）
- *  ・スマホ／タブレット: 幅いっぱいの 3:2 の帯。写真の縦横比と一致するので切り抜きが起きず、
- *    施術の様子が端まで全部見える。テキストはその下の白地に置く。
+ * 写真の出し方（hero-treatment.jpg は 2400×1653）
+ *  ・スマホ／タブレット: 幅いっぱいの帯。枠の縦横比を写真と同じ 2400/1653 にしているので
+ *    切り抜きが一切起きず、施術の様子が端まで全部見える。テキストはその下の白地に置く。
  *  ・PC: セクション全面の背景。横長に引き伸ばす分だけ縦が切れるため、
- *    院長の顔（縦 9〜30%）と手元（縦 53〜65%）が残る位置（縦20%）に寄せている。
- *    左側は白〜薄緑のグラデーションを重ねて文字を読めるようにする。
+ *    院長の顔（縦 5〜45%）が残る位置（縦14%）に寄せている。
+ *    左半分はカーテンの無地なので、白〜薄緑のグラデーションを重ねれば文字が読める。
  */
 const tags = ["慢性腰痛", "ヘルニア", "坐骨神経痛", "脊柱管狭窄症"];
 
@@ -38,14 +38,14 @@ export function Hero() {
         写真（LCP対象）。img は1枚だけで、スマホは上部の帯・PCは全面背景に切り替える。
         スマホの aspect-[3/2] は写真の縦横比と同じなので、object-cover でも一切切り抜かれない。
       */}
-      <div className="relative aspect-[3/2] w-full lg:absolute lg:inset-0 lg:-z-10 lg:aspect-auto">
+      <div className="relative aspect-[2400/1653] w-full lg:absolute lg:inset-0 lg:-z-10 lg:aspect-auto">
         <Photo
-          id="treatment-knee"
+          id="hero-treatment"
           fill
           priority
           sizes="100vw"
           quality={82}
-          className="object-cover object-center lg:object-[50%_20%]"
+          className="object-cover object-center lg:object-[50%_14%]"
         />
         <div aria-hidden="true" className="absolute inset-0 hidden lg:block" style={{ background: gradientDesktop }} />
       </div>
