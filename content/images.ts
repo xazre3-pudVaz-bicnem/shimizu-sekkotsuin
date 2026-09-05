@@ -27,8 +27,9 @@ export const realPhotos = {
   "treatment-knee": { src: "/images/treatment-knee.jpg", width: 1567, height: 1045, alt: "ベッドに横になった患者さんの膝の状態を確認しながら施術する清水接骨院の院長" },
   "check-lower-back": { src: "/images/check-lower-back.jpg", width: 1567, height: 1045, alt: "立った姿勢の患者さんの腰に手を当て、腰の状態を確認する清水接骨院の院長" },
   "treatment-neck": { src: "/images/treatment-neck.jpg", width: 1567, height: 1045, alt: "仰向けの患者さんの首まわりをやさしく施術する清水接骨院の院長" },
-  /* ヒーロー用。左半分がカーテンの無地でコピーを載せやすい構図 */
-  "hero-treatment": { src: "/images/hero-treatment.jpg", width: 2400, height: 1653, alt: "施術ベッドに横になった患者さんの首まわりを施術する清水接骨院 院長・清水正尊" },
+  /* ヒーロー用。写真を右に置き、左は写真左端のカーテンを横へ延長した横長素材。
+     scripts/build-hero-wide.mjs が生成。全面背景にしても院長の顔が大写しにならない */
+  "hero-treatment-wide": { src: "/images/hero-treatment-wide.jpg", width: 3600, height: 1320, alt: "施術ベッドに横になった患者さんの首まわりを施術する清水接骨院 院長・清水正尊" },
   "posture-check-1": { src: "/images/posture-check-1.jpg", width: 1108, height: 1477, alt: "清水接骨院の施術室で、患者さんの立ち姿勢を横から確認している様子" },
   "posture-check-2": { src: "/images/posture-check-2.jpg", width: 1096, height: 1492, alt: "施術ベッドの横で、患者さんの姿勢を確認している様子" },
   "posture-check-3": { src: "/images/posture-check-3.jpg", width: 703, height: 1600, alt: "背骨の模型が置かれた施術室で、患者さんの姿勢を横から確認している様子" },
