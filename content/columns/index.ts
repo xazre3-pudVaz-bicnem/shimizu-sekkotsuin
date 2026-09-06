@@ -32,6 +32,7 @@ import { frozenShoulderThreePhases } from "./frozen-shoulder-three-phases";
 import { kneeEffusionWhyWater } from "./knee-effusion-why-water";
 import { tennisElbowWithoutTennis } from "./tennis-elbow-without-tennis";
 import { ankleSprainRecurrence } from "./ankle-sprain-recurrence";
+import { hamstringStrainRecovery } from "./hamstring-strain-recovery";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -68,6 +69,7 @@ const all: Article[] = [
   kneeEffusionWhyWater,
   tennisElbowWithoutTennis,
   ankleSprainRecurrence,
+  hamstringStrainRecovery,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
