@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCtaBar } from "@/components/layout/MobileCtaBar";
+import { Analytics } from "@/components/layout/Analytics";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { localBusinessJsonLd, personJsonLd } from "@/lib/jsonld";
 import { IS_INDEXABLE, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
@@ -22,8 +22,7 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
-/** Google Analytics 4（測定ID）・Search Console 所有権確認は環境変数で有効化する */
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
+/** Search Console の所有権確認トークン。アクセス解析タグは components/layout/Analytics.tsx */
 const GSC_TOKEN = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
 
 export const metadata: Metadata = {
@@ -63,14 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <MobileCtaBar />
         <JsonLd data={[localBusinessJsonLd(), personJsonLd()]} />
-        {GA_ID && IS_INDEXABLE && (
-          <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
-            <Script id="ga4-init" strategy="afterInteractive">
-              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}',{anonymize_ip:true});`}
-            </Script>
-          </>
-        )}
+        <Analytics />
       </body>
     </html>
   );

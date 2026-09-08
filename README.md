@@ -22,6 +22,7 @@ npm start        # 本番サーバー
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | **必須** | 本番URL（末尾スラッシュなし）。未設定だと canonical / OG / sitemap を出力せず、robots.txt は全ページ Disallow、meta robots は noindex になります（プレビュー環境の誤インデックス防止） |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | 任意 | GA4 の測定ID（`G-XXXX`）。本番URL設定時のみ計測タグを出力 |
+| `NEXT_PUBLIC_CLARITY_PROJECT_ID` | 任意 | Microsoft Clarity のプロジェクトID（10文字前後の英数字）。ヒートマップ・セッション録画。本番URL設定時のみタグを出力 |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | 任意 | Search Console の HTML タグ方式トークン。`<meta name="google-site-verification">` として出力 |
 | `ANTHROPIC_API_KEY` | 自動投稿のみ | コラム自動生成（GitHub Actions の Secrets に設定） |
 
@@ -32,6 +33,9 @@ Vercel の場合は Project Settings → Environment Variables に Production �
 1. Search Console でプロパティ（URLプレフィックス）を追加 → 「HTMLタグ」の `content` 値を `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` に設定して再デプロイ → 確認
 2. Search Console の「サイトマップ」に `https://<本番URL>/sitemap.xml` を送信
 3. GA4 でプロパティ作成 → 測定ID を `NEXT_PUBLIC_GA_MEASUREMENT_ID` に設定して再デプロイ
+4. Microsoft Clarity（https://clarity.microsoft.com/ ・無料）でプロジェクト作成 → プロジェクトIDを `NEXT_PUBLIC_CLARITY_PROJECT_ID` に設定して再デプロイ
+   - 管理画面の Settings → Masking を **Strict** にする（来院希望者の行動を扱うため）
+   - Settings → GA4 integration で GA4 と連携すると、GA4のセグメントから録画を辿れる
 4. Googleビジネスプロフィールの「ウェブサイト」欄に本番URLを設定し、NAP（院名・住所・電話）が `content/clinic.ts` と一致しているか確認
 
 ## ディレクトリ構成
