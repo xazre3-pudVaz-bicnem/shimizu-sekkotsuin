@@ -34,6 +34,7 @@ import { tennisElbowWithoutTennis } from "./tennis-elbow-without-tennis";
 import { ankleSprainRecurrence } from "./ankle-sprain-recurrence";
 import { hamstringStrainRecovery } from "./hamstring-strain-recovery";
 import { growingAthleteLowerBackPain } from "./growing-athlete-lower-back-pain";
+import { runnersKneeOuterPain } from "./runners-knee-outer-pain";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -72,6 +73,7 @@ const all: Article[] = [
   ankleSprainRecurrence,
   hamstringStrainRecovery,
   growingAthleteLowerBackPain,
+  runnersKneeOuterPain,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
