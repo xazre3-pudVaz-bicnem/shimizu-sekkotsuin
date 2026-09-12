@@ -36,6 +36,7 @@ import { hamstringStrainRecovery } from "./hamstring-strain-recovery";
 import { growingAthleteLowerBackPain } from "./growing-athlete-lower-back-pain";
 import { runnersKneeOuterPain } from "./runners-knee-outer-pain";
 import { tensionHeadacheVsMigraine } from "./tension-headache-vs-migraine";
+import { swayBackSelfCheck } from "./sway-back-self-check";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -76,6 +77,7 @@ const all: Article[] = [
   growingAthleteLowerBackPain,
   runnersKneeOuterPain,
   tensionHeadacheVsMigraine,
+  swayBackSelfCheck,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
