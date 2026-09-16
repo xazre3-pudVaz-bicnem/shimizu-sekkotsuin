@@ -39,6 +39,7 @@ import { tensionHeadacheVsMigraine } from "./tension-headache-vs-migraine";
 import { swayBackSelfCheck } from "./sway-back-self-check";
 import { hunchbackAndShoulderStiffness } from "./hunchback-and-shoulder-stiffness";
 import { standingWorkLowerBackPain } from "./standing-work-lower-back-pain";
+import { caregivingLowerBackPain } from "./caregiving-lower-back-pain";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -82,6 +83,7 @@ const all: Article[] = [
   swayBackSelfCheck,
   hunchbackAndShoulderStiffness,
   standingWorkLowerBackPain,
+  caregivingLowerBackPain,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
