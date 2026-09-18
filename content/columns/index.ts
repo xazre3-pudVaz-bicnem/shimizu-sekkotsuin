@@ -41,6 +41,7 @@ import { hunchbackAndShoulderStiffness } from "./hunchback-and-shoulder-stiffnes
 import { standingWorkLowerBackPain } from "./standing-work-lower-back-pain";
 import { caregivingLowerBackPain } from "./caregiving-lower-back-pain";
 import { coldWeatherLowerBackPain } from "./cold-weather-lower-back-pain";
+import { bicycleAndLowerBackPain } from "./bicycle-and-lower-back-pain";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -86,6 +87,7 @@ const all: Article[] = [
   standingWorkLowerBackPain,
   caregivingLowerBackPain,
   coldWeatherLowerBackPain,
+  bicycleAndLowerBackPain,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
