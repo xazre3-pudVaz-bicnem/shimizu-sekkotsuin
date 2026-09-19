@@ -42,6 +42,7 @@ import { standingWorkLowerBackPain } from "./standing-work-lower-back-pain";
 import { caregivingLowerBackPain } from "./caregiving-lower-back-pain";
 import { coldWeatherLowerBackPain } from "./cold-weather-lower-back-pain";
 import { bicycleAndLowerBackPain } from "./bicycle-and-lower-back-pain";
+import { hipPainGroinWomen } from "./hip-pain-groin-women";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -88,6 +89,7 @@ const all: Article[] = [
   caregivingLowerBackPain,
   coldWeatherLowerBackPain,
   bicycleAndLowerBackPain,
+  hipPainGroinWomen,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
