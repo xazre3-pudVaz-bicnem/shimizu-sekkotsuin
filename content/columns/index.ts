@@ -45,6 +45,7 @@ import { bicycleAndLowerBackPain } from "./bicycle-and-lower-back-pain";
 import { hipPainGroinWomen } from "./hip-pain-groin-women";
 import { wryNeckMorning } from "./wry-neck-morning";
 import { meniscusVsOsteoarthritis } from "./meniscus-vs-osteoarthritis";
+import { lowerBackPainAndStress } from "./lower-back-pain-and-stress";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -94,6 +95,7 @@ const all: Article[] = [
   hipPainGroinWomen,
   wryNeckMorning,
   meniscusVsOsteoarthritis,
+  lowerBackPainAndStress,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
