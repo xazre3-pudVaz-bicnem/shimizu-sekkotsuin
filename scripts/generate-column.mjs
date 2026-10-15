@@ -6,7 +6,7 @@
  * 流れ: topics.json から未作成のトピックを選ぶ → Claude で構造化出力（JSON）を生成
  *      → 禁止表現・リンク先・分量・類似度を検証 → content/columns/<slug>.ts を書き出し
  *      → content/columns/index.ts の [auto-import] / [auto-list] マーカーに登録
- * 生成に失敗した場合は何も書き込まず、終了コード1で終了する。
+ * 生成に失敗した場合と、topics.json の未作成トピックが尽きた場合は、何も書き込まず終了コード1で終了する。
  */
 import Anthropic from "@anthropic-ai/sdk";
 import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
@@ -71,17 +71,30 @@ const symptomList = symptomFiles.map((s) => ({ slug: s.slug, name: (s.src.match(
 const articleList = articleFiles.map((a) => ({ slug: a.slug, title: (a.src.match(/^\s*title: "([^"]+)"/m) || [])[1] ?? a.slug }));
 const existingSlugs = new Set(articleList.map((a) => a.slug));
 
+/** GitHub Actions 上では ::warning:: / ::error:: にして実行結果の画面に注記として出す */
+function annotate(level, message) {
+  console.log(process.env.GITHUB_ACTIONS ? `::${level}::${message}` : message);
+}
+
 const topicsJson = JSON.parse(fs.readFileSync(path.join(COLUMNS_DIR, "topics.json"), "utf8"));
-const topic = TOPIC_ARG ? topicsJson.topics.find((t) => t.slug === TOPIC_ARG) : topicsJson.topics.find((t) => !existingSlugs.has(t.slug));
+const remaining = topicsJson.topics.filter((t) => !existingSlugs.has(t.slug));
+const topic = TOPIC_ARG ? topicsJson.topics.find((t) => t.slug === TOPIC_ARG) : remaining[0];
 if (!topic) {
-  console.log("生成するトピックがありません（topics.json のすべてが記事化済み）。");
-  process.exit(0);
+  // ネタ切れを正常終了にすると Actions が緑のまま何も生成されず、止まっていることに気づけない
+  // （2026-09-23〜10-14 に実際に起きた）。失敗扱いにして GitHub からの失敗通知で気づけるようにする。
+  annotate(
+    "error",
+    TOPIC_ARG
+      ? `topics.json に slug "${TOPIC_ARG}" のトピックがありません。`
+      : "生成するトピックがありません（topics.json のすべてが記事化済み）。content/columns/topics.json の末尾にトピックを追加してください。",
+  );
+  process.exit(1);
 }
-if (existingSlugs.has(topic.slug) && !TOPIC_ARG) {
-  console.log("既に存在します:", topic.slug);
-  process.exit(0);
+const leftAfterThis = remaining.filter((t) => t.slug !== topic.slug).length;
+if (leftAfterThis <= 5) {
+  annotate("warning", `topics.json の未作成トピックは、この記事のあと残り${leftAfterThis}本です。早めに追加してください。`);
 }
-console.log("topic:", topic.slug, "-", topic.title);
+console.log("topic:", topic.slug, "-", topic.title, `（残り${leftAfterThis}本）`);
 
 /* ---------- 生成 ---------- */
 const client = new Anthropic();
