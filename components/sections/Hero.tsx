@@ -10,7 +10,7 @@ import { Photo } from "@/components/ui/Photo";
  *  ・「専門家も多数推薦」…実在の推薦は4名なので「多数」とは書けない
  *  ・王冠アイコン…順位を連想させ比較優良に読まれうるのでチェックアイコンにする
  *
- * SEO: H1に「腰の痛み・しびれ」と「足立区扇・高野駅の清水接骨院」を残し、
+ * SEO: キャッチは院の指定文言のため症状名を含まない。H1には「足立区扇・高野駅の清水接骨院」を残し、
  * 症状タグで慢性腰痛・坐骨神経痛・椎間板ヘルニア・脊柱管狭窄症を自然に含める。
  *
  * 写真の出し方（hero-treatment-wide.jpg は 3600×1320 ＝ 横縦比 2.727）
@@ -68,12 +68,16 @@ export function Hero() {
             <span className="inline-block">つらさが続いている方へ</span>
           </p>
 
-          <h1 className="mt-2.5 text-[2rem] leading-[1.32] tracking-tight sm:text-[2.5rem] lg:text-[2.75rem] xl:text-[3rem]" style={{ textWrap: "initial" }}>
-            <span className="inline-block">歩くのもつらい</span>
-            <span className="mx-[-0.1em] inline-block rounded bg-brand-100/80 px-[0.1em] text-brand-700">腰の痛み・しびれ</span>
-            <br />
-            <span className="inline-block">「もう仕方がない」と</span>
-            <span className="inline-block">あきらめる前に。</span>
+          {/* キャッチは院からの指定文言（2026-10-15）。句ごとに inline-block にして語の途中で折り返さない */}
+          <h1 className="mt-2.5 text-[1.75rem] leading-[1.36] tracking-tight sm:text-[2.125rem] lg:text-[2.25rem] xl:text-[2.375rem]" style={{ textWrap: "initial" }}>
+            <span className="inline-block">ツラい体のお悩みから</span>
+            <span className="inline-block">解放され</span>
+            <span className="inline-block">この先もずっと</span>
+            <span className="inline-block">
+              <span className="mx-[-0.1em] rounded bg-brand-100/80 px-[0.1em] text-brand-700">元気で過ごせる体</span>を
+            </span>
+            <span className="inline-block">私と一緒に</span>
+            <span className="inline-block">作っていきましょう。</span>
             <span className="mt-3 block text-[16px] font-bold leading-snug text-ink-soft sm:text-lg lg:text-xl">
               足立区扇・高野駅の清水接骨院
             </span>
