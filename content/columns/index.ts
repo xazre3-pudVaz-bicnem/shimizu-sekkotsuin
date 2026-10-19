@@ -48,6 +48,7 @@ import { meniscusVsOsteoarthritis } from "./meniscus-vs-osteoarthritis";
 import { lowerBackPainAndStress } from "./lower-back-pain-and-stress";
 import { shoulderCannotRaiseCauses } from "./shoulder-cannot-raise-causes";
 import { wristThumbSidePain } from "./wrist-thumb-side-pain";
+import { weatherChangePain } from "./weather-change-pain";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -100,6 +101,7 @@ const all: Article[] = [
   lowerBackPainAndStress,
   shoulderCannotRaiseCauses,
   wristThumbSidePain,
+  weatherChangePain,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
