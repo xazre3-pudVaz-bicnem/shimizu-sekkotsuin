@@ -51,6 +51,7 @@ import { wristThumbSidePain } from "./wrist-thumb-side-pain";
 import { weatherChangePain } from "./weather-change-pain";
 import { hipOsteoarthritisDailyLife } from "./hip-osteoarthritis-daily-life";
 import { tensionHeadacheSelfCare } from "./tension-headache-self-care";
+import { postpartumPelvicBelt } from "./postpartum-pelvic-belt";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -106,6 +107,7 @@ const all: Article[] = [
   weatherChangePain,
   hipOsteoarthritisDailyLife,
   tensionHeadacheSelfCare,
+  postpartumPelvicBelt,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
