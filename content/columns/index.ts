@@ -54,6 +54,7 @@ import { tensionHeadacheSelfCare } from "./tension-headache-self-care";
 import { postpartumPelvicBelt } from "./postpartum-pelvic-belt";
 import { kneeCatchingLocking } from "./knee-catching-locking";
 import { sprainFirstAid } from "./sprain-first-aid";
+import { neckExtensionArmNumbness } from "./neck-extension-arm-numbness";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -112,6 +113,7 @@ const all: Article[] = [
   postpartumPelvicBelt,
   kneeCatchingLocking,
   sprainFirstAid,
+  neckExtensionArmNumbness,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
