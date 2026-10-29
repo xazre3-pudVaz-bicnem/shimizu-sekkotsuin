@@ -56,6 +56,7 @@ import { kneeCatchingLocking } from "./knee-catching-locking";
 import { sprainFirstAid } from "./sprain-first-aid";
 import { neckExtensionArmNumbness } from "./neck-extension-arm-numbness";
 import { painBetweenShoulderBlades } from "./pain-between-shoulder-blades";
+import { nightLegCramps } from "./night-leg-cramps";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -116,6 +117,7 @@ const all: Article[] = [
   sprainFirstAid,
   neckExtensionArmNumbness,
   painBetweenShoulderBlades,
+  nightLegCramps,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
