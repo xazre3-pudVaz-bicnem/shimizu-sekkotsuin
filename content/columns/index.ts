@@ -61,6 +61,7 @@ import { innerElbowPain } from "./inner-elbow-pain";
 import { kneePainWhenSquatting } from "./knee-pain-when-squatting";
 import { hipPainFirstSteps } from "./hip-pain-first-steps";
 import { teethClenchingNeckShoulder } from "./teeth-clenching-neck-shoulder";
+import { bruisePainLasting } from "./bruise-pain-lasting";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -126,6 +127,7 @@ const all: Article[] = [
   kneePainWhenSquatting,
   hipPainFirstSteps,
   teethClenchingNeckShoulder,
+  bruisePainLasting,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
