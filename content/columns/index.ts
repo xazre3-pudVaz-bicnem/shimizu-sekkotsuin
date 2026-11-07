@@ -65,6 +65,7 @@ import { bruisePainLasting } from "./bruise-pain-lasting";
 import { kneeOsteoarthritisWalking } from "./knee-osteoarthritis-walking";
 import { straightNeckPillow } from "./straight-neck-pillow";
 import { postpartumPubicTailbonePain } from "./postpartum-pubic-tailbone-pain";
+import { osgoodGrowingKnee } from "./osgood-growing-knee";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -134,6 +135,7 @@ const all: Article[] = [
   kneeOsteoarthritisWalking,
   straightNeckPillow,
   postpartumPubicTailbonePain,
+  osgoodGrowingKnee,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
