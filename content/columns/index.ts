@@ -67,6 +67,7 @@ import { straightNeckPillow } from "./straight-neck-pillow";
 import { postpartumPubicTailbonePain } from "./postpartum-pubic-tailbone-pain";
 import { osgoodGrowingKnee } from "./osgood-growing-knee";
 import { flatFeetFatigue } from "./flat-feet-fatigue";
+import { neckCrackingHabit } from "./neck-cracking-habit";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -138,6 +139,7 @@ const all: Article[] = [
   postpartumPubicTailbonePain,
   osgoodGrowingKnee,
   flatFeetFatigue,
+  neckCrackingHabit,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
