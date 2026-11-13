@@ -69,6 +69,7 @@ import { osgoodGrowingKnee } from "./osgood-growing-knee";
 import { flatFeetFatigue } from "./flat-feet-fatigue";
 import { neckCrackingHabit } from "./neck-cracking-habit";
 import { recurringAcuteLowBackPain } from "./recurring-acute-low-back-pain";
+import { frozenShoulderDailyTips } from "./frozen-shoulder-daily-tips";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -142,6 +143,7 @@ const all: Article[] = [
   flatFeetFatigue,
   neckCrackingHabit,
   recurringAcuteLowBackPain,
+  frozenShoulderDailyTips,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
