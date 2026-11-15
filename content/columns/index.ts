@@ -71,6 +71,7 @@ import { neckCrackingHabit } from "./neck-cracking-habit";
 import { recurringAcuteLowBackPain } from "./recurring-acute-low-back-pain";
 import { frozenShoulderDailyTips } from "./frozen-shoulder-daily-tips";
 import { bowLegsInnerKneePain } from "./bow-legs-inner-knee-pain";
+import { shinSplints } from "./shin-splints";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -146,6 +147,7 @@ const all: Article[] = [
   recurringAcuteLowBackPain,
   frozenShoulderDailyTips,
   bowLegsInnerKneePain,
+  shinSplints,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
