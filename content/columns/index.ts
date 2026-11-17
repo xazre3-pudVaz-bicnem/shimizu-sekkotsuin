@@ -73,6 +73,7 @@ import { frozenShoulderDailyTips } from "./frozen-shoulder-daily-tips";
 import { bowLegsInnerKneePain } from "./bow-legs-inner-knee-pain";
 import { shinSplints } from "./shin-splints";
 import { kotatsuSofaLowerBackPain } from "./kotatsu-sofa-lower-back-pain";
+import { yearEndCleaningBackSafety } from "./year-end-cleaning-back-safety";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -150,6 +151,7 @@ const all: Article[] = [
   bowLegsInnerKneePain,
   shinSplints,
   kotatsuSofaLowerBackPain,
+  yearEndCleaningBackSafety,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
