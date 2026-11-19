@@ -75,6 +75,7 @@ import { shinSplints } from "./shin-splints";
 import { kotatsuSofaLowerBackPain } from "./kotatsu-sofa-lower-back-pain";
 import { yearEndCleaningBackSafety } from "./year-end-cleaning-back-safety";
 import { halluxValgusFootPain } from "./hallux-valgus-foot-pain";
+import { achillesTendonPain } from "./achilles-tendon-pain";
 // [auto-import] scripts/generate-column.mjs がこの行の直前に import を追加します
 
 const all: Article[] = [
@@ -154,6 +155,7 @@ const all: Article[] = [
   kotatsuSofaLowerBackPain,
   yearEndCleaningBackSafety,
   halluxValgusFootPain,
+  achillesTendonPain,
   // [auto-list] scripts/generate-column.mjs がこの行の直前に記事を追加します
 ];
 
